@@ -1,0 +1,58 @@
+/////////////////////////////// MIXINS
+
+@mixin font-url($nameFont,$url) {
+  @font-face {
+    font-family: $nameFont;
+    font-style: normal;
+    src: url($url);
+  }
+}
+
+@mixin hr($value,$color) {
+  border-style: none;
+  border-bottom: $value solid $color;
+}
+   
+/////////////////////////////// BREAKPOINTS
+
+@mixin xs {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin below($width:500px) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin below-h($height:500px) {
+  @media only screen and (max-height: $height) {
+    @content;
+  }
+}
+
+@mixin below-h-w($height:500px,$width:500px) {
+  @media only screen and (max-height: $height) and (max-width: $width) {
+    @content;
+  }
+}

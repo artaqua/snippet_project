@@ -1,0 +1,28 @@
+/* Components */
+@import '_components/normalize';
+@import '_components/variables';
+@import '_components/mixins';
+@import '_components/settings';
+@import '_components/animation';
+@import '_components/fonts';
+@import '_components/png-sprite';
+// @import '_components/flexboxgrid';
+
+/* Modules */
+@import '_modules/page-loading';
+@import '_modules/common';
+
+/* Imports from node_modules */
+@import 'perfect-scrollbar/dist/css/perfect-scrollbar.css';
+@import 'slick-carousel/slick/slick.css';
+@import '_plagins/jquery.fancybox.scss';
+@import 'ion-rangeslider/css/ion.rangeSlider.css';
+@import 'select2/dist/css/select2.css';
+@import 'snazzy-info-window/dist/snazzy-info-window.css';
+/* Change styles plagins */
+@import '_modules/plagins';
+
+
+
+
+

@@ -1,0 +1,37 @@
+extends pug/base
+
+append vars
+  - var title = 'Home'
+
+block content
+  main.page
+    section.section-preview
+      .section-preview__wrapper-content
+        h2.section-preview__head-title Visit Poz
+          span.section-preview__light nAN
+        p.section-preview__head-descr a city on the 
+          span.section-preview__light Warta 
+          | river in west-central 
+          span.section-preview__light Poland
+          |, the region called 
+          span.section-preview__light Greater Poland.
+
+          
+    section.section-home(style=`background-image: url(${baseDir}assets/img/home/peka.jpg)`)
+      .container-fluid
+        a.link-page(href="page-2.html") page 2
+        .clearfix
+        
+        .icons-svg
+          +svg('users')
+          +svg('newspaper')
+
+        .row.end-xs.middle-xs
+          .col-xs-6
+            .reveal-box
+              img(src="https://cdn.dribbble.com/users/46302/screenshots/3811931/nice.png", alt="")
+              .wrapper-p
+                p FACKIN AMAZIN
+
+          .col-xs-12
+            #map-infrastructure.google-map

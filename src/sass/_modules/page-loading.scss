@@ -1,0 +1,55 @@
+.page-loading {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: table;
+  width: 100%;
+  width: 100vw;
+  height: 100%;
+  background: $white;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 1, 1), visibility 0.7s cubic-bezier(0.4, 0, 1, 1);
+  &.load {
+    visibility: hidden;
+    opacity: 0;
+  }
+  &.anim-stop {
+    .spinner {
+      animation-play-state: paused;
+    }
+  }
+  .center {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .spinner {
+    width: 50px;
+    height: 50px;
+    margin: 100px auto;
+    background-color: $blue;
+    border-radius: 100%;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+  }
+
+  @-webkit-keyframes sk-scaleout {
+    0% { -webkit-transform: scale(0) }
+    100% {
+      -webkit-transform: scale(1.0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes sk-scaleout {
+    0% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 100% {
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+      opacity: 0;
+    }
+  }
+}

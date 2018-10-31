@@ -1,0 +1,72 @@
+@keyframes anim-moema {
+  to {
+    opacity: 0;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes error-form {
+  0% {
+    transform: scale(1) translate(0,0);
+  }
+  33% {
+    transform: scale(1.06) translate(-5px,0);
+  }
+  66% {
+    transform: scale(1.06) translate(5px,0);
+  }
+  100% {
+    transform: scale(1) translate(0,0);
+  }
+}
+@keyframes valid-form {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes img-zoom {
+  0% {
+    transform: scale3d(1,1,1);
+  }
+  50% {
+    transform: scale3d(1.1,1.1,1);
+  }
+  100% {
+    transform: scale3d(1,1,1);
+  }
+}
+
+@keyframes showElem {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rippleDrop {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes helpSwipe {
+  0% {
+    transform: translate(-10px,0);
+  }
+  100% {
+    transform: translate(10px,0);
+  }
+}

@@ -1,0 +1,75 @@
+.order-call-popup.popup
+  .wrapper-popup
+    a.close(href="#")
+    h3 Обратный звонок
+    form#form-order-call(action="#")
+      input(type="text" name="clientName" placeholder="Ваше Имя")
+      input(type="text" name="clientPhone" placeholder="Номер телефона")
+      .clearfix
+      .row
+        .col-md-4.col-sm-4.col-xs-4
+          select(name="callTime")
+            option(value="8:00") 8:00
+            option(value="9:00") 9:00
+            option(value="10:00") 10:00
+            option(value="11:00") 11:00
+            option(value="11:30") 12:00
+            option(value="13:00") 13:00
+            option(value="14:00") 14:00
+            option(value="15:00") 15:00
+            option(value="16:00") 16:00
+            option(value="17:00") 17:00
+            option(value="18:00") 18:00
+            option(value="19:00") 19:00
+            option(value="20:00") 20:00
+        .col-md-8.col-sm-8.col-xs-8
+          select(name="callDay")
+            option(value="1") Понедельник
+            option(value="2") Вторник
+            option(value="3") Среда
+            option(value="4") Четверг
+            option(value="5") Пятница
+            option(value="6") Субота
+            option(value="7") Воскресенье
+      
+      button.btn.btn-submit(type="submit") 
+        span Заказать звонок
+
+.popup-shares.popup
+  a.prev(href="#")
+  a.next(href="#")
+  a.close(href="#")
+  .wrapper-popup
+    .slider-shares
+      .slick-slide(data-preview-img="images/news/preview-shares/img-1.jpg" )
+        //- img(src="assets/img/shares/img-1.jpg", alt="")
+        a.btn.more(href="#") 
+          span Узнать больше
+      .slick-slide(data-preview-img="images/news/preview-shares/img-1.jpg" )
+        //- img(src="assets/img/shares/img-1.jpg", alt="")
+        a.btn.more(href="#") 
+          span Узнать больше
+      .slick-slide(data-preview-img="images/news/preview-shares/img-1.jpg" )
+        //- img(src="assets/img/shares/img-1.jpg", alt="")
+        a.btn.more(href="#") 
+          span Узнать больше
+
+.feedback-popup.popup
+  .wrapper-popup
+    a.close(href="#")
+    h3 Подписаться на новости и акции
+    form#form-feedback(action="#")
+      input(type="text" name="feedbackEmail" placeholder="Ваш e-mail")
+      .wrapper-btn
+        button.btn.btn-submit(type="submit") 
+          span Подписаться
+
+.more-popup.popup
+  .wrapper-popup
+    a.close(href="#")
+    h3 Уточнить подробности акции
+    form#form-more(action="#")
+      input(type="text" name="morePhone" placeholder="Номер телефона")
+      .wrapper-btn
+        button.btn.btn-submit(type="submit") 
+          span Отправить
