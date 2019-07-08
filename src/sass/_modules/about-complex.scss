@@ -1,0 +1,147 @@
+@import '_components/variables';
+@import '_components/mixins';
+
+.about-complex {
+  &__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -9px;
+    margin-top: 18px;
+    @include below(500px) {
+      margin: 0 -20px;
+    }
+  }
+  &__col {
+    padding: 0 9px;
+    flex-basis: 50%;
+    max-width: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-bottom: 18px;
+    min-height: 280px;
+    @include below(900px) {
+      padding: 0 3px;
+      margin-bottom: 6px;
+    }
+    @include below(650px) {
+      flex-basis: 100%;
+      max-width: 100%;
+      min-height: auto;
+    }
+    @include below(500px) {
+      padding: 0;
+      margin-bottom: 4px;
+    }
+    &:first-child {
+      @include below(500px) {
+        margin-top: 4px;
+      }
+    }
+  }
+  &__right-content {
+    flex-grow: 1;
+    margin-top: 20px;
+    @include below(1100px) {
+      width: auto;
+      flex-grow: 0;
+      order: -1;
+      margin-top: 0;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+    @include below(500px) {
+      top: 20px;
+      right: 20px;
+    }
+  }
+  &__logo {
+    float: right;
+    @include below(1100px) {
+      width: 80px;
+    }
+  }
+  &__circle {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    background: $white;
+    @include below(1100px) {
+      float: none;
+      width: 75px;
+      height: 75px;
+    }
+    img {
+      @include below(1100px) {
+        width: 36px;
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background: #f2f2f2;
+    padding: 20px 30px 20px 40px;
+    @include below(1100px) {
+      padding: 20px 30px 20px 30px;
+      flex-direction: column;
+    }
+    @include below(650px) {
+      padding: 10px 30px 20px 30px;
+    }
+    @include below(500px) {
+      padding: 15px 20px 25px 20px;
+    }
+  }
+  &__title {
+    line-height: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    @include below(1100px) {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    @include below(500px) {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      line-height: 22px;
+    }
+  }
+  &__descr {
+    margin: 0;
+    @include below(1100px) {
+      font-size: 13px;
+    }
+    @include below(900px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    @include below(650px) {
+      font-size: 13px;
+      line-height: normal;
+    }
+  }
+}
+.about-complex-list {
+  &__item {
+    color: #8d8d8d;
+    line-height: 24px;
+    @include below(500px) {
+      font-size: 13px;
+    }
+    &_black {
+      color: $black;
+    }
+  }
+  &__value {
+    color: $black;
+  }
+}

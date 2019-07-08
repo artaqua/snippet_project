@@ -1,0 +1,54 @@
+/* Components */
+@import '_components/variables';
+@import '_components/mixins';
+
+/* Modules */
+@import '_modules/about-complex';
+@import '_modules/banklist';
+@import '_modules/documentation';
+
+/* Plagins */
+/* Imports from node_modules */
+@import 'swiper/dist/css/swiper.css';
+@import 'lightgallery.js/dist/css/lightgallery.css';
+/* Change plagins */
+@import '_plagins/change-plagins';
+
+/* Page */
+.page-companies {
+  position: relative;
+  overflow: hidden;
+  &__header {
+    padding: 15px 0 20px 0;
+    @include below(500px) {
+      padding: 0 0 20px 0;
+    }
+  }
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @include below(900px) {
+      margin-top: 15px;
+    }
+    @include below(500px) {
+      margin-top: 20px;
+    }
+  }
+  &__descr {
+    line-height: 21px;
+    letter-spacing: 0.5px;
+    margin: 0;
+    @include below(500px) {
+      font-size: 13px;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    background-color: #e8e8e8;
+    @include below(800px) {
+      padding: 0;
+    }
+  }
+}

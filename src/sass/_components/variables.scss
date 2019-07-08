@@ -1,45 +1,47 @@
 /////////////////////////////// VARIABLES
 
 $white:                         #fff;
-$black:                         #232528;
+$black:                         #444646;
 $grey:                          #939598;
 $light:                         #fcecd5;
-$blue:                          #61c0c8;
+$blue:                          #3bbbcd;
 $red:                           #eb5c5d;
-$green:                         #53a955;
+$green:                         #409945;
 $pink:                          #9f5d78;
-$purple:                        #4e2b54;
+$yellow:                        #ffef3c;
+$orange:                        #f66036;
 
 $base-color:                    $black;
 $body-bg:                       $white;
-$a-color:                       $blue;
-$a-color-hover:                 $black;
+$a-color:                       $orange;
+$a-color-hover:                 $orange;
 $h-color:                       $base-color;
 $p-color:                       $base-color;
 
-$selection-bg:                  $blue;
+$selection-bg:                  $orange;
 
 $border-color:                  $grey;
 $border-color-hover:            lighten($border-color, 15%);
 
-$font-1:                        'GothamPro', sans-serif;  
+$font-1:                        'Open Sans', 'Arial', sans-serif;  
+$font-2:                        'Montserrat', 'Arial', sans-serif;
 
 $font-base:                     $font-1;
 $html-font-size:                100%;
 
-$font-size:                     16px;
-$h1-size:                       80px;
-$h2-size:                       60px;
-$h3-size:                       40px;
-$h4-size:                       28px;
+$font-size:                     14px;
+$h1-size:                       40px;
+$h2-size:                       36px;
+$h3-size:                       30px;
+$h4-size:                       24px;
 
-$h-font:                        $font-1;
-$h-font-width:                  700;
+$h-font:                        $font-2;
+$h-font-width:                  500;
 
 $p-line-height:                 1.6;
 $h-line-height:                 1.2;
 
-$container-fluid-max-width:     1160px;
+$container-fluid-max-width:     1220px;
 
 $easing:                        cubic-bezier(0.28, 0.57, 0.22, 0.76);
 

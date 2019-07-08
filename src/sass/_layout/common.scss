@@ -1,0 +1,171 @@
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+body {
+  overflow-x:hidden;
+  overflow-y: auto;
+  &.overflowed {
+    overflow-y: hidden;
+  }
+}
+main {
+  flex-grow: 1;
+}
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 100%;
+  max-width: $container-fluid-max-width;
+}
+.btn {
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-1;
+  font-size: 14px;
+  background: $orange;
+  border-radius: 0;
+  color: $white;
+  height: 54px;
+  padding: 0 40px;
+  transition: all 350ms ease;
+  @include below(900px) {
+    height: 42px;
+    font-size: 13px;
+  }
+  &:hover {
+    background: $orange;
+    color: $white;
+    border-color: $orange;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transform: translate3d(0,2px,0);
+  }
+  &__text {
+    z-index: 3;
+    position: relative;
+    color: $white;
+    margin-left: 15px;
+    transition: all 400ms ease;
+  }
+  &__svg {
+    width: 24px;
+    height: 24px;
+    fill: $white;
+    transition: all 400ms ease;
+  }
+}
+.title-md {
+  font-size: 26px;
+  font-family: $font-2;
+  font-weight: normal;
+  letter-spacing: 0.4px;
+  margin: 0;
+  @include below(900px) {
+    font-size: 21px;
+  }
+  @include below(500px) {
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0;
+  }
+  &__orange {
+    color: $orange;
+  }
+}
+.title-sm {
+  font-size: 16px;
+  font-family: $font-1;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Layout */
+.layout {
+  &__content {
+    padding-top: 63px;
+    @include below(1150px) {
+      padding-top: 43px;
+    }
+  }
+  &__offer {
+    padding-top: 60px;
+    @include below(1200px) {
+      padding-top: 40px;
+    }
+  }
+  &__map-objects {
+    margin-top: 60px;
+    @include below(1200px) {
+      margin-top: 40px;
+    }
+  }
+  &__news-blog {
+    margin-top: 50px;
+    @include below(1200px) {
+      margin-top: 35px;
+    }
+  }
+  &__stock {
+    margin-top: 60px;
+    @include below(1200px) {
+      margin-top: 45px;
+    }
+    @include below(600px) {
+      margin: 0 -20px;
+      margin-top: 40px;
+    }
+  }
+  &__buildings {
+    margin-top: 50px;
+    @include below(1200px) {
+      margin-top: 40px;
+    }
+  }
+  &__developers {
+    padding: 65px 0;
+    @include below(1200px) {
+      padding: 40px 0;
+    }
+    @include below(600px) {
+      padding: 20px 0;
+    }
+  }
+  &__about-info {
+    padding: 60px 0 50px 0;
+    @include below(1200px) {
+      padding: 45px 0 50px 0;
+    }
+  }
+  &__popular-queries {
+    padding: 55px 0 45px 0;
+    @include below(1200px) {
+      padding: 45px 0 45px 0;
+    }
+  }
+  &__wordbook {
+    margin-bottom: 40px;
+    @include below(600px) {
+      margin-bottom: 25px;
+    }
+  }
+  &__special {
+    margin-bottom: 40px;
+    @include below(1200px) {
+      margin-bottom: 25px;
+    }
+    @include below(500px) {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+

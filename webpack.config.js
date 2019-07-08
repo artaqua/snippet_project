@@ -22,9 +22,6 @@ module.exports = {
       }
     ]
   },
-  externals: {
-    jquery: 'jQuery'
-  },
   performance: { 
     hints: false 
   }

@@ -8,32 +8,29 @@ block vars
     var description = typeof description !== 'undefined' ? description : null
 
 doctype html
-html
+html(lang="ru")
   head
     title= title
     meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(name="format-detection" content="telephone=no")
     meta(name='description', content=`${description}`)
     link(href=`${baseDir}assets/img/favicon.ico` rel='shortcut icon')
     block styles
-      link(href=`${baseDir}assets/css/bundle.css?v=${Date.now()}` rel="stylesheet")
-  body
-    
-    // Page Loader
-    include _modules/page-loading.pug
+
+  body.layout
     // Header
-    include _modules/header.pug
+    include _layout/header.pug
     // Sidebar menu
-    include _modules/sidebar-menu.pug
+    include _layout/sidebar-menu.pug
     // Content
     block content
     // Footer
-    include _modules/footer.pug
+    include _layout/footer.pug
 
     // Scripts
     block scripts
-      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
       script(src=`${baseDir}assets/js/bundle.js?v=${Date.now()}`)
     
 

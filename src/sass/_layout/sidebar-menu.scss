@@ -1,0 +1,140 @@
+///////////////////////////////////////////
+///////////////// SIDEBAR MENU ////////////
+///////////////////////////////////////////
+.sidebar-menu {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 320px;
+  height: 100%;
+  background: $white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-shadow: -2px 0 5px rgba(0,0,0,.1);
+  transition: all 500ms ease;
+  display: none;
+  transform: rotateY(90deg);
+  transform-origin: left center;
+  @include below(900px) {
+    display: block !important;
+  }
+  &_active {
+    transform: rotateY(0deg);
+    .sidebar-menu__close {
+      transform: rotate(0);
+    }
+  }
+  &__close {
+    z-index: 3;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(360deg);
+    transition: all 400ms ease;
+    &:before,
+    &:after {
+      position: absolute;
+      top: -1px;
+      left: 9px;
+      content: ' ';
+      height: 18px;
+      width: 2px;
+      background-color: #3e3e3e;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+  &__body {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding: 10px 20px 180px 20px;
+  }
+  &__nav-page {
+    margin-top: 60px;
+  }
+  &__favorite {
+    display: flex;
+    margin-top: 35px;
+    font-size: 17px;
+    .favorite__icon {
+      width: 19px;
+      height: 19px;
+    }
+  }
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #181a1a;
+    padding: 38px 20px 38px 20px;
+  }
+  &__wordbook {
+    margin-top: 20px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__logo {
+    @include below(500px) {
+      margin-left: -10px;
+    }
+  }
+}
+.list-nav-sidebar {
+  &__item {
+    position: relative;
+  }
+  &__link {
+    font-family: $font-1;
+    font-size: 16px;
+    font-weight: 600;
+    color: $black;
+    margin: 14px 0;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+.list-socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 30px;
+  }
+  &__ad {
+    margin-right: 15px;
+  }
+  &__icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: $orange;
+    margin-right: 15px;
+  }
+  &__svg {
+    width: 18px;
+    height: 18px;
+    fill: $white;
+  }
+  &__text {
+    color: $white;
+  }
+}

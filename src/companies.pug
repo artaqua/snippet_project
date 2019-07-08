@@ -1,18 +1,18 @@
 extends pug/base
 
 append vars
-  - var title = 'Home'
+  - var title = 'Companies'
 
 block styles
   link(href=`assets/css/main.css` rel="stylesheet")
-  link(href=`assets/css/page-index.css` rel="stylesheet")
+  link(href=`assets/css/page-companies.css` rel="stylesheet")
   link(href="https://fonts.googleapis.com/css?family=Montserrat:500|Open+Sans:400,600,700&amp;subset=cyrillic" rel="stylesheet")
   //- script(defer src="//api-maps.yandex.ru/2.1/?apikey=331f0d07-e46d-4d29-8413-0bab3f422cd9&load=package.standard&lang=ru-RU")
 
 block content
   main
     .layout__content
-      .page-index
+      .page-companies
         .container-fluid
-          h3.title-md.page-index__title Page index
+          h3.title-md.page-companies__title Page companies
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae molestiae facere suscipit harum quae ab ipsum sit voluptate omnis laborum nisi, explicabo, fugit illo sint fugiat nam dolorum quod libero!
