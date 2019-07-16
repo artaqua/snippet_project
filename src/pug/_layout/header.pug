@@ -1,0 +1,27 @@
+header.header-page
+  .container-fluid
+    .header-page__inner
+      a.logo(href="index.html")
+        img(src=`${baseDir}assets/img/logo.png`, alt="")
+      button.btn-menu.header-page__btn-menu
+        span.btn-menu__lines
+          span.btn-menu__line.btn-menu__line_one
+          span.btn-menu__line.btn-menu__line_two
+          span.btn-menu__line.btn-menu__line_three
+      nav.nav-page.header-page__nav-page
+        ul.list-nav-page
+          li.list-nav-page__item
+            a.list-nav-page__link(href="#") Квартиры
+          li.list-nav-page__item
+            a.list-nav-page__link(href="#") Новостройки
+          li.list-nav-page__item
+            a.list-nav-page__link(href="#") Коммерческая недвижимость
+          li.list-nav-page__item
+            a.list-nav-page__link(href="#") Застройщики
+      a.favorite.header-page__favorite(href="#")
+        +svg('star', 'favorite__icon')
+        span.favorite__name Избранное 
+        span.favorite__count (5)
+  
+
+   

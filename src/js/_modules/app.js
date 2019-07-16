@@ -1,5 +1,6 @@
 ;'use strict';
 
+import LazyLoad from 'vanilla-lazyload';
 import Swiper from 'swiper';
 import 'lightgallery.js';
 import ymapsTouchScroll from 'ymaps-touch-scroll';
@@ -9,6 +10,14 @@ import {
   ready,
   hasClass,
 } from './functions.js';
+
+// Lazy load
+let lazyLoadInstance = new LazyLoad({
+  elements_selector: ".lazy"
+});
+if (lazyLoadInstance) {
+  lazyLoadInstance.update();
+}
 
 // APP
 // Event DOM Ready

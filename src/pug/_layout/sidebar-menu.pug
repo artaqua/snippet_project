@@ -1,0 +1,31 @@
+aside.sidebar-menu.page__sidebar-menu(style="display: none;")
+  a.sidebar-menu__close(href="#")
+  .sidebar-menu__body
+    a.logo.sidebar-menu__logo(href="index.html")
+      img(src=`${baseDir}assets/img/logo.png`, alt="")
+    nav.nav-page.sidebar-menu__nav-page
+      ul.list-nav-sidebar
+        li.list-nav-sidebar__item
+          a.list-nav-sidebar__link(href="#") Квартиры
+        li.list-nav-sidebar__item
+          a.list-nav-sidebar__link(href="#") Новостройки
+        li.list-nav-sidebar__item
+          a.list-nav-sidebar__link(href="#") Коммерческая недвижимость
+        li.list-nav-sidebar__item
+          a.list-nav-sidebar__link(href="#") Застройщики
+    a.favorite.sidebar-menu__favorite(href="#")
+      +svg('star', 'favorite__icon')
+      span.favorite__name Избранное 
+      span.favorite__count (5)
+
+    .sidebar-menu__footer
+      .list-socials
+        a.list-socials__item
+          .list-socials__icon
+            +svg('vk', 'list-socials__svg')
+          span.list-socials__text Вконтакте
+        a.list-socials__item
+          .list-socials__icon
+            +svg('facebook', 'list-socials__svg')
+          span.list-socials__text Facebook
+      a.sidebar-menu__wordbook(href="#") wiki-словарь
