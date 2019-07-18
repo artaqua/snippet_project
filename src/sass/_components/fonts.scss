@@ -1,13 +1,22 @@
 /* Fonts */
 @font-face {
-  font-family: 'Muller';
-  src: local('Muller'), url('../fonts/MullerRegular.otf') format('opentype');
+  font-display: swap;
+  font-family: 'Open Sans', Arial, sans-serif;
+  src: local('Open Sans'), url('../fonts/OpenSans-Regular-webfont.woff') format('woff');
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: 'Muller';
-  src: local('Muller'), url('../fonts/MullerBold.otf') format('opentype');
+  font-display: swap;
+  font-family: 'Open Sans', Arial, sans-serif;
+  src: local('Open Sans'), url('../fonts/OpenSans-Light-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Open Sans', Arial, sans-serif;
+  src: local('Open Sans'), url('../fonts/OpenSans-Bold-webfont.woff') format('woff');
   font-style: normal;
   font-weight: 700;
 }

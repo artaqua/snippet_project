@@ -53,6 +53,7 @@ var path = {
     js: build + '/assets/js/',
     css: build + '/assets/css/',
     img: build + '/assets/img/',
+    minImg: src + '/img/',
     sprites: build + '/assets/img/sprites/',
     fonts: build + '/assets/fonts/',
     resources: build + '/assets/resources/'
@@ -117,13 +118,11 @@ gulp.task('js:build', function(done) {
     .pipe(browserSync.stream());
 });
 
-gulp.task('img', async function() {
+gulp.task('img:build', function(done) {
   return gulp.src(path.src.img)
-    .pipe(cache('images'))
-    .pipe(image())
     .pipe(gulp.dest(path.build.img))
+    .pipe(browserSync.stream());
 });
-gulp.task('imgReload', gulp.series('img', bsReload));
 
 gulp.task('fonts:build', function(done) {
   return gulp.src(path.src.fonts)
@@ -178,17 +177,26 @@ gulp.task('watch', function() {
   gulp.watch(path.watch.pug,  gulp.series('htmlReload'));
   gulp.watch(path.watch.style, gulp.series('styleReload'));
   gulp.watch(path.watch.js, gulp.series('js:build'));
+  gulp.watch(path.watch.img, gulp.series('img:build'));
   gulp.watch(path.watch.resources, gulp.series('resources:build'));
   gulp.watch(path.watch.fonts, gulp.series('fonts:build'));
   gulp.watch(path.watch.pngSprite, gulp.series('pngSprite'));
   gulp.watch(path.watch.svgSprite, gulp.series('svgSprite'));
-  gulp.watch(path.watch.img, gulp.series('imgReload'));
+});
+
+/////////////////////////////// MIN IMGS 
+gulp.task('img', async function() {
+  return gulp.src(path.src.img)
+    .pipe(cache('images'))
+    .pipe(image())
+    .pipe(gulp.dest(path.build.minImg))
 });
 
 /////////////////////////////// DEFAULT
 gulp.task('default', gulp.series(
   gulp.parallel('clean:build'),
   gulp.parallel('htmlReload', 'styleReload', 'js:build'),
-  gulp.parallel('resources:build', 'fonts:build', 'pngSprite', 'svgSprite', 'imgReload'),
+  gulp.parallel('img:build', 'fonts:build', 'resources:build', 'pngSprite', 'svgSprite'),
   gulp.parallel('browser-sync', 'watch')
 ));
+
