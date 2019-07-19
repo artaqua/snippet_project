@@ -4,10 +4,8 @@ import LazyLoad from 'vanilla-lazyload';
 import Swiper from 'swiper';
 import 'lightgallery.js';
 import ymapsTouchScroll from 'ymaps-touch-scroll';
-
 import { 
   toggleScroll,
-  ready,
   hasClass,
 } from './functions.js';
 
@@ -18,7 +16,7 @@ let lazyLoadInstance = new LazyLoad({
 
 // APP
 // Event DOM Ready
-ready(function() {
+document.addEventListener("DOMContentLoaded", () => {
 
   // Menu
   const btnMenu = document.querySelector('.btn-menu');

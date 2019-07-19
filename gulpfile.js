@@ -63,7 +63,7 @@ var path = {
 };
 
 /////////////////////////////// LIVERELOAD
-gulp.task('browser-sync', function(done) {
+gulp.task('browser-sync', async function(done) {
   return browserSync.init({
     injectChanges: true,
     server: {
@@ -79,7 +79,7 @@ gulp.task('clean:build', function(done) {
   return del(path.build.html);
 });
 
-gulp.task('html:build',  function(done) {
+gulp.task('html:build', function(done) {
   return gulp.src(path.src.pug)
     .pipe(plumber({
       errorHandler: notify.onError("Error: <%= error.message %>")
@@ -110,7 +110,9 @@ gulp.task('style:build', function(done) {
 gulp.task('styleReload', gulp.series('style:build', bsReload));
 
 gulp.task('js:build', function(done) {
-  return gulp.src('src/entry.js', { allowEmpty: true })
+  return gulp.src('src/entry.js', { 
+      allowEmpty: true
+    })
     .pipe(plumber({
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
