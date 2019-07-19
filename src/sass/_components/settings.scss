@@ -172,6 +172,22 @@ svg {
   display: block;
 }
 
+/* Lazy loading*/
+img.lazy {
+  opacity: 0;
+}
+img.lazy:not(.initial) {
+  transition: opacity 1s;
+}
+img.lazy.initial,
+img.lazy.loaded,
+img.lazy.error {
+  opacity: 1;
+}
+img:not([src]) {
+  visibility: hidden;
+}
+
 /* Scroll */
 ::-webkit-scrollbar {
   width: 6px;  /* for vertical scrollbars */

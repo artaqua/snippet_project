@@ -15,9 +15,6 @@ import {
 let lazyLoadInstance = new LazyLoad({
   elements_selector: ".lazy"
 });
-if (lazyLoadInstance) {
-  lazyLoadInstance.update();
-}
 
 // APP
 // Event DOM Ready
