@@ -17,6 +17,7 @@ var gulp                      = require('gulp'),
     browserSync               = require('browser-sync').create(),
     svgstore                  = require('gulp-svgstore'),
     svgmin                    = require('gulp-svgmin'),
+    surge                     = require('gulp-surge'),
     webpack                   = require('webpack'),
     webpackStream             = require('webpack-stream'),
     webpackConfig             = require('./webpack.config.js');
@@ -191,6 +192,14 @@ gulp.task('img', async function() {
     .pipe(image())
     .pipe(gulp.dest(path.build.minImg))
 });
+
+/////////////////////////////// DEPLOY PROJECT
+gulp.task('deploy', async function () {
+  return surge({
+    project: './build',           // Path to your static build directory
+    domain: 'flow-flow.surge.sh'  // Your domain or Surge subdomain
+  })
+})
 
 /////////////////////////////// DEFAULT
 gulp.task('default', gulp.series(
