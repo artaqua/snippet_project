@@ -3,11 +3,11 @@
 import LazyLoad from 'vanilla-lazyload';
 import Swiper from 'swiper';
 import 'lightgallery.js';
-import ymapsTouchScroll from 'ymaps-touch-scroll';
 import { 
   toggleScroll,
   hasClass,
 } from './functions.js';
+import yandexMap from './yandexMap.js';
 
 // Lazy load
 let lazyLoadInstance = new LazyLoad({
@@ -17,6 +17,9 @@ let lazyLoadInstance = new LazyLoad({
 // APP
 // Event DOM Ready
 document.addEventListener("DOMContentLoaded", () => {
+
+  // Init Map
+  yandexMap();
 
   // Menu
   const btnMenu = document.querySelector('.btn-menu');

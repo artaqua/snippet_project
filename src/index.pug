@@ -13,12 +13,104 @@ block content
     .layout__content
       .page-index
         .container-fluid
-          h3.title-md.page-index__title Yandex карта это - 15-20% на Google Page Speed, по возможности не подключать карту а вставлять ссылкой
+          h3.title-md.page-index__title по возможности не подключать карту а вставлять ссылкой вот так:
           a(target="_blank" href="https://goo.gl/maps/P6eqkYn8rmJqfj8P8") Карта
-          h3.title-md.page-index__title На видимом экране при загрузке не должно быть lazy load img только после
-          img(src="assets/img/folder/test-1.jpg" alt="")
+          img.lazy(src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3276 4096'%3E%3C/svg%3E" data-src="assets/img/folder/test-7.jpg" alt="")
+          img.lazy(src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4928 3264'%3E%3C/svg%3E" data-src="assets/img/folder/test-8.jpg" alt="")  
+          +svg('star')
+          +svg('pdf')
+          +svg('star')
+          +svg('check')
+          +svg('metro')
+          +svg('cross')
+          +svg('arrow-left')
+          +svg('pdf')
+          +svg('star')
+          +svg('check')
+          +svg('metro')
+          +svg('cross')
+          +svg('arrow-left')
+          +svg('pdf')
+          +svg('star')
+          +svg('check')
+          +svg('metro')
+          +svg('cross')
+          .list-month-build.dinamic-build__list-month-build
+            .list-month-build__field
+              input#month-1.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-1") Январь
+            .list-month-build__field
+              input#month-2.list-month-build__input(name="month" type="radio" checked)
+              label.list-month-build__label(for="month-2") Февраль
+            .list-month-build__field
+              input#month-3.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-3") Март
+            .list-month-build__field
+              input#month-4.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-4") Апрель
+            .list-month-build__field
+              input#month-5.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-5") Май
+            .list-month-build__field
+              input#month-6.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-6") Июнь
+            .list-month-build__field
+              input#month-7.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-7") Июль
+            .list-month-build__field
+              input#month-8.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-8") Август
+            .list-month-build__field
+              input#month-9.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-9") Сентябрь
+            .list-month-build__field
+              input#month-10.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-10") Октябрь
+            .list-month-build__field
+              input#month-11.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-11") Ноябрь
+            .list-month-build__field
+              input#month-12.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-12") Декабрь
           h3.title-md.page-index__title Page index 2 323
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae molestiae facere suscipit harum quae ab ipsum sit voluptate omnis laborum nisi, explicabo, fugit illo sint fugiat nam dolorum quod libero!
+          .list-month-build.dinamic-build__list-month-build
+            .list-month-build__field
+              input#month-1.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-1") Январь
+            .list-month-build__field
+              input#month-2.list-month-build__input(name="month" type="radio" checked)
+              label.list-month-build__label(for="month-2") Февраль
+            .list-month-build__field
+              input#month-3.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-3") Март
+            .list-month-build__field
+              input#month-4.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-4") Апрель
+            .list-month-build__field
+              input#month-5.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-5") Май
+            .list-month-build__field
+              input#month-6.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-6") Июнь
+            .list-month-build__field
+              input#month-7.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-7") Июль
+            .list-month-build__field
+              input#month-8.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-8") Август
+            .list-month-build__field
+              input#month-9.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-9") Сентябрь
+            .list-month-build__field
+              input#month-10.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-10") Октябрь
+            .list-month-build__field
+              input#month-11.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-11") Ноябрь
+            .list-month-build__field
+              input#month-12.list-month-build__input(name="month" type="radio")
+              label.list-month-build__label(for="month-12") Декабрь
           img.lazy(src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 485'%3E%3C/svg%3E" data-src="assets/img/folder/test-1.jpg" alt="")
           p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, omnis veritatis laboriosam laudantium, neque ducimus adipisci explicabo vitae excepturi est magnam deserunt pariatur aut incidunt officiis maiores unde accusamus impedit.
           img.lazy(src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 604 340'%3E%3C/svg%3E" data-src="assets/img/folder/test-2.jpg" alt="")
@@ -33,6 +125,10 @@ block content
           img.lazy(src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 485'%3E%3C/svg%3E" data-src="assets/img/folder/test-1.jpg" alt="")
           p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, omnis veritatis laboriosam laudantium, neque ducimus adipisci explicabo vitae excepturi est magnam deserunt pariatur aut incidunt officiis maiores unde accusamus impedit.
           img.lazy(src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 604 340'%3E%3C/svg%3E" data-src="assets/img/folder/test-2.jpg" alt="")
+          
+          #ya-map
+          #ya-map2
+
           p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, omnis veritatis laboriosam laudantium, neque ducimus adipisci explicabo vitae excepturi est magnam deserunt pariatur aut incidunt officiis maiores unde accusamus impedit.
           .test-bg.lazy(data-bg="url(assets/img/folder/test-3.jpg)")
           p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, omnis veritatis laboriosam laudantium, neque ducimus adipisci explicabo vitae excepturi est magnam deserunt pariatur aut incidunt officiis maiores unde accusamus impedit.
