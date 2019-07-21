@@ -9,14 +9,14 @@ import {
 } from './functions.js';
 import yandexMap from './yandexMap.js';
 
-// Lazy load
-let lazyLoadInstance = new LazyLoad({
-  elements_selector: ".lazy"
-});
-
 // APP
 // Event DOM Ready
 document.addEventListener("DOMContentLoaded", () => {
+
+  // Lazy load
+  let lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+  });
 
   // Init Map
   yandexMap();
