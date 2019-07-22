@@ -18,9 +18,6 @@ let lazyLoadInstance = new LazyLoad({
 // Event DOM Ready
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Init Map
-  yandexMap();
-
   // Menu
   const btnMenu = document.querySelector('.btn-menu');
   if (btnMenu) {
@@ -684,3 +681,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+// Init Map
+yandexMap();

@@ -6,7 +6,6 @@ append vars
 block styles
   link(href=`assets/css/main.css` rel="stylesheet")
   link(href=`assets/css/page-index.css` rel="stylesheet")
-  //- script(defer src="//api-maps.yandex.ru/2.1/?apikey=331f0d07-e46d-4d29-8413-0bab3f422cd9&load=package.standard&lang=ru-RU")
 
 block content
   main
@@ -16,8 +15,6 @@ block content
           #ya-map
           h3.title-md.page-index__title по возможности не подключать карту а вставлять ссылкой вот так:
           a(target="_blank" href="https://goo.gl/maps/P6eqkYn8rmJqfj8P8") Карта
-          img.lazy(src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3276 4096'%3E%3C/svg%3E" data-src="assets/img/folder/test-7.jpg" alt="")
-          img.lazy(src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4928 3264'%3E%3C/svg%3E" data-src="assets/img/folder/test-8.jpg" alt="")  
           +svg('star')
           +svg('pdf')
           +svg('star')
@@ -159,3 +156,1175 @@ block content
           .test-bg.lazy(data-bg="url(assets/img/folder/test-4.jpg)")
           p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, omnis veritatis laboriosam laudantium, neque ducimus adipisci explicabo vitae excepturi est magnam deserunt pariatur aut incidunt officiis maiores unde accusamus impedit.
           img.lazy(src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 720'%3E%3C/svg%3E" data-src="assets/img/folder/test-5.jpg" alt="")
+
+
+
+
+
+
+      .landing
+        .container-fluid
+          .breadcrumbs.landing__breadcrumbs
+            .breadcrumbs__item 
+              a.breadcrumbs__link(href="#") Главная
+            .breadcrumbs__item 
+              a.breadcrumbs__link(href="#") Новостройки
+            .breadcrumbs__item ЖК Ясный
+          .card__header-name
+            .card__logo
+              img(src=`${baseDir}assets/img/landing/logo-complex/img-1.jpg`, alt="")
+            h4.title-md.card__name ЖК Ясный
+            .card__wrapper-rate
+              .rate.card__rate
+                span.rate__star.rate__star_checked ★
+                span.rate__star.rate__star_checked ★
+                span.rate__star.rate__star_checked ★
+                span.rate__star.rate__star_checked ★
+                span.rate__star ★
+              span.card__comments 13 отзывов
+            a.card__phone(href="tel:84954523245") 8 (495) 452-32-45
+            address.card__address Москва, Каштановая аллея, д.5
+          
+          // Слайдер 1
+          .module-slider.landing__module-slider
+            img.module-slider__img(src=`${baseDir}assets/img/landing/slider/img-1.jpg`, alt="")
+            a.module-slider__prev(href="#")
+              +svg('arrow-left', 'module-slider__icon-left')
+            a.module-slider__next(href="#")
+              +svg('arrow-right', 'module-slider__icon-right')
+            .module-slider__nav
+              span.module-slider__dot
+              span.module-slider__dot
+              span.module-slider__dot.module-slider__dot_active
+              span.module-slider__dot
+              span.module-slider__dot
+              span.module-slider__dot
+        
+        // Фичи
+        .features.landing__features
+          .bg-wrapper-light
+            .container-fluid
+              h3.title-md.features__head-title Почему выбирают ЖК “Ясный”
+              .features__list
+                .features__col
+                  .features__item
+                    span.features__numb 1
+                    p.features__descr До метро 8 минут на машине, 
+                      br
+                      | если ехать не быстро
+                .features__col
+                  .features__item
+                    span.features__numb 2
+                    p.features__descr Дома стоят напротив живописной бухты с собственным пляжем
+                .features__col
+                  .features__item
+                    span.features__numb 3
+                    p.features__descr До метро 8 минут на машине,
+                      br
+                      | если ехать не быстро
+        
+        // О комплексе
+        .about-complex
+          .container-fluid
+            .about-complex__row
+              .about-complex__col
+                .about-complex__item
+                  .about-complex__left-content
+                    h3.title-md.about-complex__title Застройщик 
+                      br
+                      | ГК Гранель
+                    ul.about-complex-list
+                      li.about-complex-list__item Год основания: 
+                        span.about-complex-list__value 1992
+                      li.about-complex-list__item Комплексов строится: 
+                        span.about-complex-list__value 8
+                      li.about-complex-list__item Комплексов сдано: 
+                        span.about-complex-list__value 7
+                      li.about-complex-list__item Место в ТОП10 застройщиков РФ: 
+                        span.about-complex-list__value 8
+                  .about-complex__right-content
+                    img.about-complex__logo(src=`${baseDir}assets/img/landing/logo-complex/img-2.jpg`, alt="")
+              .about-complex__col
+                .about-complex__item
+                  p.about-complex__descr Один из крупнейших девелоперов Москвы, чьи интересы распространяются на столичный регион и Подмосковье. Реализуемые сегменты недвижимости — гостиницы и жилые комплексы стандарт- и комфорт-класса с объектами инфраструктуры: школами, детскими садами, паркингами, поликлиниками, спортивными и торговыми центрами. Создаются малоэтажные индивидуальные проекты и типовые высотные дома комплексной застройки. В портфеле несколько объектов-долгостроев других организаций, по которым приняты и исполнены обязательства помочь обманутым дольщикам. Технологии и материалы строительства: панель, монолит, кирпич. Среди финансовых партнеров крупнейшие банки страны: Сбербанк, Газпромбанк, ВТБ.
+              .about-complex__col
+                .about-complex__item
+                  .about-complex__left-content
+                    h3.title-md.about-complex__title Квартиры 
+                      br
+                      | в продаже
+                    ul.about-complex-list
+                      li.about-complex-list__item.about-complex-list__item_black Студия от 130 150 руб/м2  (от 12м2)
+                      li.about-complex-list__item.about-complex-list__item_black 1-комн. от 132 280 руб/м2  (от 39м2)
+                      li.about-complex-list__item.about-complex-list__item_black 2-комн. от 159 590 руб/м2  (от 49м2)
+                      li.about-complex-list__item.about-complex-list__item_black 3-комн. от 170 340 руб/м2  (от 68м2)
+                      li.about-complex-list__item.about-complex-list__item_black 4-комн. от 171 532 руб/м2  (от 120м2)
+                  .about-complex__right-content
+                    .about-complex__circle
+                      img(src=`${baseDir}assets/img/landing/icons/icon-1.png`, alt="")
+              .about-complex__col
+                .about-complex__item
+                  .about-complex__left-content
+                    h3.title-md.about-complex__title ЖК “Малина”
+                      br
+                      | в цифрах
+                    ul.about-complex-list
+                      li.about-complex-list__item Этажность: 
+                        span.about-complex-list__value 24
+                      li.about-complex-list__item Количество домов: 
+                        span.about-complex-list__value 5
+                      li.about-complex-list__item Высота потолков: 
+                        span.about-complex-list__value 2,5м
+                      li.about-complex-list__item Отделка: 
+                        span.about-complex-list__value есть
+                      li.about-complex-list__item Тип стен: 
+                        span.about-complex-list__value кирпич
+                  .about-complex__right-content
+                    .about-complex__circle
+                      img(src=`${baseDir}assets/img/landing/icons/icon-2.png`, alt="")
+ 
+        .container-fluid
+          // Акции
+          .sale
+            .sale__row
+              .sale__col
+                .sale__item
+                  h3.sale__title 2+1
+                  p.sale__descr Год основания
+              .sale__col
+                .sale__item
+                  h3.sale__title Скидки!
+                  p.sale__descr Средняя оценка жильцов комплека
+              .sale__col
+                .sale__item
+                  h3.sale__title 360 скидок
+                  p.sale__descr Квартир сдано
+              .sale__col
+                .sale__item
+                  h3.sale__title Акция
+                  p.sale__descr Место в ТОП 10 застройщиков РФ
+
+          // Связатся
+          .connection
+            h3.title-md.connection__title Свяжитесь с нами удобным для вас способом
+            .connection__btns
+              a.btn.connection__btn(href="") Позвоните мне
+              a.btn.connection__btn.connection__btn_grey.js-phone-connection(href="#") 
+                span.connection__name Показать телефон
+                span.connection__phone(data-phone="8 (495) 452-32-45") 8 (495) 452-32-XX
+
+          // Список Квартир
+          .section-rooms
+            h3.title-md.section-rooms__head-title Квартиры в ЖК Ясный
+            form.filter-rooms(action="#")
+              .rooms-opts.filter-rooms__rooms-opts
+                .rooms-opts__item
+                  .facing
+                    .facing__field
+                      input#facing-off.facing__input(name="facing" type="radio")
+                      label.facing__label(for="facing-off") Без отделки
+                    .facing__toggle.facing__toggle_active
+                    .facing__field
+                      input#facing-on.facing__input(name="facing" type="radio" checked)
+                      label.facing__label(for="facing-on") C отделкой
+                    .tooltip-facing
+                      a.tooltip-facing__link(href="#") ?
+                      .tooltip-facing__content
+                        p.tooltip-facing__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum nulla, debitis molestiae quaerat harum perferendis ipsum. Facere cum at eligendi repellat deleniti ab quod dolore reprehenderit sed aut, alias cupiditate.
+                .rooms-opts__item
+                  .swipe-icon.rooms-opts__swipe-icon
+                  .rooms-opts__scroll
+                    .select-room
+                      .select-room__field
+                        input#room-1.select-room__input(name="rooms" type="radio")
+                        label.select-room__label(for="room-1") студии
+                      .select-room__field
+                        input#room-2.select-room__input(name="rooms" type="radio" checked)
+                        label.select-room__label(for="room-2") 1-комнатные
+                      .select-room__field
+                        input#room-3.select-room__input(name="rooms" type="radio")
+                        label.select-room__label(for="room-3") 2-комнатные
+                      .select-room__field
+                        input#room-4.select-room__input(name="rooms" type="radio")
+                        label.select-room__label(for="room-4") 3-комнатные
+                      .select-room__field
+                        input#room-5.select-room__input(name="rooms" type="radio")
+                        label.select-room__label(for="room-5") 4 и более комнат
+            .table-rooms
+              .swipe-icon.table-rooms__swipe-icon
+              .scroll-table.table-rooms__scroll-table
+                .table-rooms__head
+                  .table-rooms__row.table-rooms__row_head
+                    .table-rooms__cell.table-rooms__cell_1
+                      .sort.table-rooms__sort
+                        .sort__text Комнатность
+                    .table-rooms__cell.table-rooms__cell_2
+                      .sort.table-rooms__sort
+                        .sort__text Общая площадь
+                        a.sort__arrow.sort__arrow_down(href="#")
+                    .table-rooms__cell.table-rooms__cell_3
+                      .sort.table-rooms__sort
+                        .sort__text Этаж
+                        a.sort__arrow(href="#")
+                    .table-rooms__cell.table-rooms__cell_4
+                      .sort.table-rooms__sort
+                        .sort__text Цена, руб
+                        a.sort__arrow(href="#")
+                    .table-rooms__cell.table-rooms__cell_5
+                      .sort.table-rooms__sort
+                        .sort__text Ипотекa, руб/мес
+                        a.sort__arrow(href="#")
+                    .table-rooms__cell.table-rooms__cell_6
+                    .table-rooms__cell.table-rooms__cell_7
+                .table-rooms__body
+                  .table-rooms__row
+                    .table-rooms__cell.table-rooms__cell_1 
+                      a.table-rooms__link(href="#") 1-комнатная
+                    .table-rooms__cell.table-rooms__cell_2 39.4 м
+                      sup 2
+                    .table-rooms__cell.table-rooms__cell_3 2
+                    .table-rooms__cell.table-rooms__cell_4 1 890 000
+                    .table-rooms__cell.table-rooms__cell_5 20 350
+                    .table-rooms__cell.table-rooms__cell_6 
+                      a.similar.js-popup-similar(href="#")
+                        img.similar__svg(src=`${baseDir}assets/img/icons/menu-orange.svg`, alt="")
+                        span.similar__text 7 похожих
+                    .table-rooms__cell.table-rooms__cell_7
+                      a.favorite(href="#")
+                        +svg("star", "favorite__icon")
+                  .table-rooms__row
+                    .table-rooms__cell.table-rooms__cell_1 
+                      a.table-rooms__link(href="#") 3-комнатная
+                    .table-rooms__cell.table-rooms__cell_2 49.4 м
+                      sup 2
+                    .table-rooms__cell.table-rooms__cell_3 2
+                    .table-rooms__cell.table-rooms__cell_4 2 890 000
+                    .table-rooms__cell.table-rooms__cell_5 20 350
+                    .table-rooms__cell.table-rooms__cell_6 
+                      a.similar.js-popup-similar(href="#")
+                        img.similar__svg(src=`${baseDir}assets/img/icons/menu-orange.svg`, alt="")
+                        span.similar__text 7 похожих
+                    .table-rooms__cell.table-rooms__cell_7
+                      a.favorite.favorite_active(href="#")
+                        +svg("star", "favorite__icon")
+                  .table-rooms__row
+                    .table-rooms__cell.table-rooms__cell_1 
+                      a.table-rooms__link(href="#") 2-комнатная
+                    .table-rooms__cell.table-rooms__cell_2 49.4 м
+                      sup 2
+                    .table-rooms__cell.table-rooms__cell_3 2
+                    .table-rooms__cell.table-rooms__cell_4 2 890 000
+                    .table-rooms__cell.table-rooms__cell_5 20 350
+                    .table-rooms__cell.table-rooms__cell_6 
+                      a.similar.js-popup-similar(href="#")
+                        img.similar__svg(src=`${baseDir}assets/img/icons/menu-orange.svg`, alt="")
+                        span.similar__text 7 похожих
+                    .table-rooms__cell.table-rooms__cell_7
+                      a.favorite(href="#")
+                        +svg("star", "favorite__icon")
+                  .table-rooms__row
+                    .table-rooms__cell.table-rooms__cell_1 
+                      a.table-rooms__link(href="#") 2-комнатная
+                    .table-rooms__cell.table-rooms__cell_2 49.4 м
+                      sup 2
+                    .table-rooms__cell.table-rooms__cell_3 2
+                    .table-rooms__cell.table-rooms__cell_4 2 890 000
+                    .table-rooms__cell.table-rooms__cell_5 20 350
+                    .table-rooms__cell.table-rooms__cell_6 
+                      a.similar.js-popup-similar(href="#")
+                        img.similar__svg(src=`${baseDir}assets/img/icons/menu-orange.svg`, alt="")
+                        span.similar__text 7 похожих
+                    .table-rooms__cell.table-rooms__cell_7
+                      a.favorite(href="#")
+                        +svg("star", "favorite__icon")
+                  .table-rooms__row
+                    .table-rooms__cell.table-rooms__cell_1 
+                      a.table-rooms__link(href="#") 2-комнатная
+                    .table-rooms__cell.table-rooms__cell_2 49.4 м
+                      sup 2
+                    .table-rooms__cell.table-rooms__cell_3 2
+                    .table-rooms__cell.table-rooms__cell_4 2 890 000
+                    .table-rooms__cell.table-rooms__cell_5 20 350
+                    .table-rooms__cell.table-rooms__cell_6 
+                      a.similar.js-popup-similar(href="#")
+                        img.similar__svg(src=`${baseDir}assets/img/icons/menu-orange.svg`, alt="")
+                        span.similar__text 7 похожих
+                    .table-rooms__cell.table-rooms__cell_7
+                      a.favorite(href="#")
+                        +svg("star", "favorite__icon")
+              a.btn.table-rooms__more(href="#") Показать все
+
+          // Слайдер отделки
+          h3.title-md.landing__slider-title Варианты отделки в ЖК Ясный
+          .module-slider
+            img.module-slider__img(src=`${baseDir}assets/img/landing/slider/img-1.jpg`, alt="")
+            a.module-slider__prev(href="#")
+              +svg('arrow-left', 'module-slider__icon-left')
+            a.module-slider__next(href="#")
+              +svg('arrow-right', 'module-slider__icon-right')
+            .module-slider__nav
+              span.module-slider__dot
+              span.module-slider__dot
+              span.module-slider__dot.module-slider__dot_active
+              span.module-slider__dot
+              span.module-slider__dot
+              span.module-slider__dot
+          
+        // Карта комплекса
+        .map
+          #gk-map.map__gk
+
+        // Время до метро
+        .time-metro
+          .container-fluid
+            h3.title-md.time-metro__head-title Время до метро
+            .swipe-icon.time-metro__swipe-icon
+            .time-metro__scroll
+              .list-time-metro.time-metro__list-time-metro
+                .list-time-metro__item
+                  .list-time-metro__top
+                    span.list-time-metro__circle
+                    span.list-time-metro__name Арбатско-Покровская
+                  .list-time-metro__footer
+                    span.list-time-metro__metro
+                      +svg('train', 'list-time-metro__icon')
+                      | 15 мин.
+                    .list-time-metro__walk
+                      +svg('walk', 'list-time-metro__icon')
+                      | 50 мин.
+                .list-time-metro__item
+                  .list-time-metro__top
+                    span.list-time-metro__circle
+                    span.list-time-metro__name Филёвская 
+                  .list-time-metro__footer
+                    span.list-time-metro__metro
+                      +svg('train', 'list-time-metro__icon')
+                      | 4 мин.
+                    .list-time-metro__walk
+                      +svg('walk', 'list-time-metro__icon')
+                      | 15 мин.
+                .list-time-metro__item
+                  .list-time-metro__top
+                    span.list-time-metro__circle
+                    span.list-time-metro__name Серпуховско-Тимирязевская 
+                  .list-time-metro__footer
+                    span.list-time-metro__metro
+                      +svg('train', 'list-time-metro__icon')
+                      | 10 мин.
+                    .list-time-metro__walk
+                      +svg('walk', 'list-time-metro__icon')
+                      | 35 мин.
+                .list-time-metro__item
+                  .list-time-metro__top
+                    span.list-time-metro__circle
+                    span.list-time-metro__name Кольцевая 
+                  .list-time-metro__footer
+                    span.list-time-metro__metro
+                      +svg('train', 'list-time-metro__icon')
+                      | 8 мин.
+                    .list-time-metro__walk
+                      +svg('walk', 'list-time-metro__icon')
+                      | 20 мин.
+
+        // Инфраструктура
+        .container-fluid
+          .infrastructure
+            .infrastructure__row
+              .infrastructure__col.infrastructure__col_1
+                .infrastructure__photo(style=`background-image: url(${baseDir}assets/img/landing/infrastructure/img-3.jpg)`)
+                .infrastructure__info
+                  h3.title-md.infrastructure__title 2 школы и 4 детских сада
+                  p.infrastructure__descr Школьные здания современной планировки рассчитаны на 2200 учеников. Дошкольные учреждения примут в своих стенах 800 малышей
+              .infrastructure__col.infrastructure__col_2
+                .infrastructure__photo(style=`background-image: url(${baseDir}assets/img/landing/infrastructure/img-2.jpg)`)
+                .infrastructure__info
+                  h3.title-md.infrastructure__title Поликлиника
+                  p.infrastructure__descr В центре ""Европейский стандарт здоровья"" квалифицированные медики, современное оборудование. До 600 посещений в день без очередей
+              .infrastructure__col.infrastructure__col_3
+                .infrastructure__photo(style=`background-image: url(${baseDir}assets/img/landing/infrastructure/img-4.jpg)`)
+                .infrastructure__info
+                  h3.title-md.infrastructure__title Парковка без проблем
+                  p.infrastructure__descr Наземный многоуровневый паркинг рассчитан на 6050 автомобилей, что позволит максимально освободить дворы комплекса от машин
+              .infrastructure__col.infrastructure__col_4
+                .infrastructure__photo(style=`background-image: url(${baseDir}assets/img/landing/infrastructure/img-2.jpg)`)
+                .infrastructure__info
+                  h3.title-md.infrastructure__title Все необходимое рядом
+                  p.infrastructure__descr Многофункциональный центр ""Мои документы"", физкультурный комплекс с бассейном, торгово-офисный центр, магазины, аптеки, салоны
+              .infrastructure__col.infrastructure__col_5
+                .infrastructure__photo(style=`background-image: url(${baseDir}assets/img/landing/infrastructure/img-5.jpg)`)
+        
+        // Банки партнеры
+        .bg-wrapper-light
+          .banklist
+            .container-fluid
+              h3.title-md.banklist__head-title Банки-партнеры
+              .table-banks
+                .swipe-icon.table-banks__swipe-icon
+                .scroll-table.table-banks__scroll-table
+                  .table-banks__head
+                    .table-banks__row.table-banks__row_head
+                      .table-banks__cell.table-banks__cell_1
+                        span.table-banks__head-title наименование
+                      .table-banks__cell.table-banks__cell_2
+                        span.table-banks__head-title ип. ставка%
+                      .table-banks__cell.table-banks__cell_3
+                        span.table-banks__head-title взнос
+                      .table-banks__cell.table-banks__cell_4
+                        span.table-banks__head-title кредит
+                  .table-banks__body
+                    .table-banks__row
+                      .table-banks__cell.table-banks__cell_1 
+                        a.table-banks__link(href="#") Дельта кредит банк
+                      .table-banks__cell.table-banks__cell_2 10,95
+                      .table-banks__cell.table-banks__cell_3 15%
+                      .table-banks__cell.table-banks__cell_4 до 25 лет
+                    .table-banks__row
+                      .table-banks__cell.table-banks__cell_1 
+                        a.table-banks__link(href="#") Сбербанк
+                      .table-banks__cell.table-banks__cell_2 12,95
+                      .table-banks__cell.table-banks__cell_3 15%
+                      .table-banks__cell.table-banks__cell_4 до 25 лет
+                    .table-banks__row
+                      .table-banks__cell.table-banks__cell_1 
+                        a.table-banks__link(href="#") Альфабанк
+                      .table-banks__cell.table-banks__cell_2 13,95
+                      .table-banks__cell.table-banks__cell_3 15%
+                      .table-banks__cell.table-banks__cell_4 до 25 лет
+                    .table-banks__row
+                      .table-banks__cell.table-banks__cell_1 
+                        a.table-banks__link(href="#") Сельхозпромсвязь банк
+                      .table-banks__cell.table-banks__cell_2 10,95
+                      .table-banks__cell.table-banks__cell_3 15%
+                      .table-banks__cell.table-banks__cell_4 до 25 лет
+                    .table-banks__row
+                      .table-banks__cell.table-banks__cell_1 
+                        a.table-banks__link(href="#") Райффайзен банк
+                      .table-banks__cell.table-banks__cell_2 10,95
+                      .table-banks__cell.table-banks__cell_3 15%
+                      .table-banks__cell.table-banks__cell_4 до 25 лет
+              a.btn.banklist__more-banks(href="#") Показать все
+        
+        // Связатся
+        .container-fluid
+          .connection
+            h3.title-md.connection__title Свяжитесь с нами удобным для вас способом
+            .connection__btns
+              a.btn.connection__btn(href="") Позвоните мне
+              a.btn.connection__btn.connection__btn_grey.js-phone-connection(href="#") 
+                span.connection__name Показать телефон
+                span.connection__phone(data-phone="8 (495) 452-32-45") 8 (495) 452-32-XX
+        
+        // О проекте
+        .about-text.landing__about-text
+          .container-fluid
+            h4.title-md.about-text__head-title О проекте ЖК Ясный
+            .descr-block
+              .descr-block__content
+                p.about-text__descr "Квартирум" - это портал о новостройках Москвы и Московской области. Здесь вы найдете актуальную базу квартир с удобной навигацией. Предусмотрена сортировка квартир по району Москвы, населенному пункту Подмосковья и близости определенных станций метро. Кроме того, есть возможность выбора жилого комплекса или квартиры по заданным параметрам. Еще одна опция - поиск по наименованию застройщика, позволяющий выбрать компанию, которой вы больше всего доверяете. На сайте доступна актуальная и подробная информация о новостройках: новости и фото со строительных площадок жилых комплексов, стоимость и планировки квартир и апартаментов, данные о застройщиках и партнерах проектов, контакты и многое другое.
+                p.about-text__descr Здесь вы найдете полезную информацию о квартирах в новостройках и рынке первичного жилья в целом. На портале публикуются новости, которые позволяют ознакомиться с последними новинками и событиями в данном сегменте. Аналитика рынка недвижимости региона поможет разобраться в тех или иных процессах, происходящих сейчас в этой сфере. С помощью актуальных аналитических данных вы сделаете правильный выбор локации в городе при покупке квартиры, а также найдете ответы на многие вопросы, в том числе - почему стоимость жилья в разных частях города может существенно различаться. Почерпнуть полезную информацию можно из интересных статей об особенностях покупки, проживания и обустройства квартиры в новостройке. В разделе "Инфографика" приведены графические материалы, предназначенные для наглядного ознакомления с особенностями новостроек.
+              a.descr-block__read-more(href="#") Показать все
+
+        // Динамика строительства
+        .dinamic-build
+          .container-fluid
+            h4.title-md.dinamic-build__head-title Динамика строительства
+            .list-year-build.dinamic-build__list-year-build
+              .list-year-build__field
+                input#year-1.list-year-build__input(name="year" type="radio" checked)
+                label.list-year-build__label(for="year-1") 2019
+              .list-year-build__field
+                input#year-2.list-year-build__input(name="year" type="radio")
+                label.list-year-build__label(for="year-2") 2018
+            .swipe-icon.dinamic-build__swipe-icon
+            .dinamic-build__scroll
+              .list-month-build.dinamic-build__list-month-build
+                .list-month-build__field
+                  input#month-1.list-month-build__input(name="month" type="radio")
+                  label.list-month-build__label(for="month-1") Январь
+                .list-month-build__field
+                  input#month-2.list-month-build__input(name="month" type="radio" checked)
+                  label.list-month-build__label(for="month-2") Февраль
+                .list-month-build__field
+                  input#month-3.list-month-build__input(name="month" type="radio")
+                  label.list-month-build__label(for="month-3") Март
+                .list-month-build__field
+                  input#month-4.list-month-build__input(name="month" type="radio")
+                  label.list-month-build__label(for="month-4") Апрель
+                .list-month-build__field
+                  input#month-5.list-month-build__input(name="month" type="radio")
+                  label.list-month-build__label(for="month-5") Май
+                .list-month-build__field
+                  input#month-6.list-month-build__input(name="month" type="radio")
+                  label.list-month-build__label(for="month-6") Июнь
+                .list-month-build__field
+                  input#month-7.list-month-build__input(name="month" type="radio")
+                  label.list-month-build__label(for="month-7") Июль
+                .list-month-build__field
+                  input#month-8.list-month-build__input(name="month" type="radio")
+                  label.list-month-build__label(for="month-8") Август
+                .list-month-build__field
+                  input#month-9.list-month-build__input(name="month" type="radio")
+                  label.list-month-build__label(for="month-9") Сентябрь
+                .list-month-build__field
+                  input#month-10.list-month-build__input(name="month" type="radio")
+                  label.list-month-build__label(for="month-10") Октябрь
+                .list-month-build__field
+                  input#month-11.list-month-build__input(name="month" type="radio")
+                  label.list-month-build__label(for="month-11") Ноябрь
+                .list-month-build__field
+                  input#month-12.list-month-build__input(name="month" type="radio")
+                  label.list-month-build__label(for="month-12") Декабрь
+
+            // Слайдер 3
+            .module-slider.dinamic-build__module-slider
+              .module-slider__container
+                .module-slider__content
+                  .module-slider__inner
+                    img.module-slider__img(src=`${baseDir}assets/img/landing/slider/img-2.jpg`, alt="")
+                    span.module-slider__name Корпус 6
+                    .module-slider__nav
+                      span.module-slider__dot
+                      span.module-slider__dot
+                      span.module-slider__dot.module-slider__dot_active
+                      span.module-slider__dot
+                      span.module-slider__dot
+                      span.module-slider__dot
+                  a.module-slider__prev.module-slider__prev_dinamic(href="#")
+                    +svg('arrow-left', 'module-slider__icon-left')
+                  a.module-slider__next.module-slider__next_dinamic(href="#")
+                    +svg('arrow-right', 'module-slider__icon-right')
+                .module-slider__info
+                  .module-slider__info-item
+                    h4.module-slider__title КОРПУС 2
+                    p.module-slider__descr Сдача на госкомиссию В основе концепции комплекса
+                  .module-slider__info-item
+                    h4.module-slider__title КОРПУС 3
+                    p.module-slider__descr Сдача на госкомиссию
+                  .module-slider__info-item
+                    h4.module-slider__title КОРПУС 6
+                    p.module-slider__descr Сдача на госкомиссию В основе концепции комплекса - пропорциональное сочетание современного городского стиля, комфортного функционала и материалов высокого качества. Спокойная цветовая гамма домов с яркими акцентами создает приятную атмосферу.
+
+                
+              
+        // Документация
+        .documentation.landing__documentation
+          .container-fluid
+            h3.title-md.documentation__head-title Документация
+            .list-documentation.documentation__list-documentation
+              .list-documentation__item
+                a.list-documentation__link(href="#")
+                  +svg('pdf', 'list-documentation__icon')
+                  span.list-documentation__name Аудиторское заключение по годовой бухгалтерской отчетности за 2018 год
+              .list-documentation__item
+                a.list-documentation__link(href="#")
+                  +svg('pdf', 'list-documentation__icon')
+                  span.list-documentation__name Аудиторское заключение по годовой бухгалтерской отчетности за 2018 год
+              .list-documentation__item
+                a.list-documentation__link(href="#")
+                  +svg('pdf', 'list-documentation__icon')
+                  span.list-documentation__name Договор аренды земельного участка
+              .list-documentation__item
+                a.list-documentation__link(href="#")
+                  +svg('pdf', 'list-documentation__icon')
+                  span.list-documentation__name Договор аренды земельного участка
+              .list-documentation__item
+                a.list-documentation__link(href="#")
+                  +svg('pdf', 'list-documentation__icon')
+                  span.list-documentation__name Дополнительное соглашение №1 к договору аренды
+              .list-documentation__item
+                a.list-documentation__link(href="#")
+                  +svg('pdf', 'list-documentation__icon')
+                  span.list-documentation__name Дополнительное соглашение №1 к договору аренды
+            a.btn.list-documentation__read-more(href="#") Показать все
+        
+        // Новости ЖК
+        .news-blog.card__news-blog
+          .container-fluid
+            h3.title-md.news-blog__title Новости жилого комплекса
+            .list-news-blog
+              .list-news-blog__row
+                .list-news-blog__col
+                  a.list-news-blog__item(href="#")
+                    img.list-news-blog__img(src=`${baseDir}assets/img/blog/new/img-1.jpg`, alt="")
+                    h3.list-news-blog__title ГК «Гранель» передала ключи обманутым дольщикам ЖК «Квартал Лукино»
+                .list-news-blog__col
+                  a.list-news-blog__item(href="#")
+                    img.list-news-blog__img(src=`${baseDir}assets/img/blog/new/img-2.jpg`, alt="")
+                    h3.list-news-blog__title «Центр-2» - жизнь в центре событий
+                .list-news-blog__col
+                  a.list-news-blog__item(href="#")
+                    img.list-news-blog__img(src=`${baseDir}assets/img/blog/new/img-3.jpg`, alt="")
+                    h3.list-news-blog__title ГК «Гранель» передала ключи обманутым дольщикам ЖК «Квартал Лукино»
+                .list-news-blog__col
+                  a.list-news-blog__item(href="#")
+                    img.list-news-blog__img(src=`${baseDir}assets/img/blog/new/img-4.jpg`, alt="")
+                    h3.list-news-blog__title «Центр-2» - жизнь в центре событий
+                .list-news-blog__hidden-content
+                  .list-news-blog__col
+                    a.list-news-blog__item(href="#")
+                      img.list-news-blog__img(src=`${baseDir}assets/img/blog/new/img-1.jpg`, alt="")
+                      h3.list-news-blog__title ГК «Гранель» передала ключи обманутым дольщикам ЖК «Квартал Лукино»
+                  .list-news-blog__col
+                    a.list-news-blog__item(href="#")
+                      img.list-news-blog__img(src=`${baseDir}assets/img/blog/new/img-2.jpg`, alt="")
+                      h3.list-news-blog__title «Центр-2» - жизнь в центре событий
+                  .list-news-blog__col
+                    a.list-news-blog__item(href="#")
+                      img.list-news-blog__img(src=`${baseDir}assets/img/blog/new/img-3.jpg`, alt="")
+                      h3.list-news-blog__title ГК «Гранель» передала ключи обманутым дольщикам ЖК «Квартал Лукино»
+                  .list-news-blog__col
+                    a.list-news-blog__item(href="#")
+                      img.list-news-blog__img(src=`${baseDir}assets/img/blog/new/img-4.jpg`, alt="")
+                      h3.list-news-blog__title «Центр-2» - жизнь в центре событий
+              a.btn.list-news-blog__show-more(href="#") Показать все
+        
+        // Комментарии
+        .comments
+          .container-fluid
+            .comments__inner
+              h3.title-md.comments__title Отзывы о застройщике (3)
+              .list-comments.comments__list-comments
+                .list-comments__item
+                  .list-comments__head
+                    span.list-comments__autor Иван Фадеев
+                    .rate.list-comments__rate
+                      span.rate__star.rate__star_checked ★
+                      span.rate__star.rate__star_checked ★
+                      span.rate__star.rate__star_checked ★
+                      span.rate__star.rate__star_checked ★
+                      span.rate__star ★
+                  p.list-comments__descr Дома хрущёвской постройки (разговорное «хрущёвки») — советские типовые панельные или кирпичные жилые дома, обычно 5-этажные, с малогабаритными квартирами, а также квартира в таком доме. Названы по фамилии Н. С. Хрущёва, в период правления которого началось их массовое строительство в СССР[1][2]. Часто «хрущёвками» также называют аналогичные кирпичные дома, строившиеся в то же время, и, более редкие, блочные.
+                .list-comments__item
+                  .list-comments__head
+                    span.list-comments__autor Максим Иванов
+                    .rate.list-comments__rate
+                      span.rate__star.rate__star_checked ★
+                      span.rate__star.rate__star_checked ★
+                      span.rate__star.rate__star_checked ★
+                      span.rate__star.rate__star_checked ★
+                      span.rate__star ★
+                  p.list-comments__descr С началом строительства хрущёвок советское домостроение стало преимущественно индустриальным. Хрущёвки в сравнении со сталинками, возводившимися только из кирпича, имели квартиры меньших размеров, архитектура домов была предельно проста и функциональна. В то же время хрущёвки во многом превосходили многоквартирные деревянные двухэтажные дома типовых серий, массово строившиеся в сталинский период[3] и позволили разрешить острейшую нехватку жилья. На смену хрущёвкам пришли брежневки, вместе с которыми они до сих пор остаются одним из наиболее массовых типов жилья в странах СНГ.
+                .list-comments__item
+                  .list-comments__head
+                    span.list-comments__autor Никита Емельянов
+                    .rate.list-comments__rate
+                      span.rate__star.rate__star_checked ★
+                      span.rate__star.rate__star_checked ★
+                      span.rate__star.rate__star_checked ★
+                      span.rate__star.rate__star_checked ★
+                      span.rate__star ★
+                  p.list-comments__descr Дома хрущёвской постройки (разговорное «хрущёвки») — советские типовые панельные или кирпичные жилые дома, обычно 5-этажные, с малогабаритными квартирами, а также квартира в таком доме. Названы по фамилии Н. С. Хрущёва, в период правления которого началось их массовое строительство в СССР[1][2]. Часто «хрущёвками» также называют аналогичные кирпичные дома, строившиеся в то же время, и, более редкие, блочные.
+                .list-comments__hidden-content
+                  .list-comments__item
+                    .list-comments__head
+                      span.list-comments__autor Максим Иванов
+                      .rate.list-comments__rate
+                        span.rate__star.rate__star_checked ★
+                        span.rate__star.rate__star_checked ★
+                        span.rate__star.rate__star_checked ★
+                        span.rate__star.rate__star_checked ★
+                        span.rate__star ★
+                    p.list-comments__descr С началом строительства хрущёвок советское домостроение стало преимущественно индустриальным. Хрущёвки в сравнении со сталинками, возводившимися только из кирпича, имели квартиры меньших размеров, архитектура домов была предельно проста и функциональна. В то же время хрущёвки во многом превосходили многоквартирные деревянные двухэтажные дома типовых серий, массово строившиеся в сталинский период[3] и позволили разрешить острейшую нехватку жилья. На смену хрущёвкам пришли брежневки, вместе с которыми они до сих пор остаются одним из наиболее массовых типов жилья в странах СНГ.
+                  .list-comments__item
+                    .list-comments__head
+                      span.list-comments__autor Никита Емельянов
+                      .rate.list-comments__rate
+                        span.rate__star.rate__star_checked ★
+                        span.rate__star.rate__star_checked ★
+                        span.rate__star.rate__star_checked ★
+                        span.rate__star.rate__star_checked ★
+                        span.rate__star ★
+                    p.list-comments__descr Дома хрущёвской постройки (разговорное «хрущёвки») — советские типовые панельные или кирпичные жилые дома, обычно 5-этажные, с малогабаритными квартирами, а также квартира в таком доме. Названы по фамилии Н. С. Хрущёва, в период правления которого началось их массовое строительство в СССР[1][2]. Часто «хрущёвками» также называют аналогичные кирпичные дома, строившиеся в то же время, и, более редкие, блочные.
+                a.list-comments__read-more(href="#") Показать все
+
+              form.feedback
+                .feedback__inner
+                  h5.feedback__title Оставить отзыв
+                  .feedback__row
+                    .feedback__col
+                      input.feedback__name(type="text" placeholder="Ваше имя" name="feedback-name")
+                    .feedback__col
+                      .pick-rate
+                        p.pick-rate__descr Оцените компанию от 1 до 5:
+                        .pick-rate__inner
+                          input.pick-rate__input(type="radio" id="star5" name="rate" value="5")
+                          label.pick-rate__label(for="star5") ★
+                          input.pick-rate__input(type="radio" id="star4" name="rate" value="4" checked)
+                          label.pick-rate__label(for="star4") ★
+                          input.pick-rate__input(type="radio" id="star3" name="rate" value="3")
+                          label.pick-rate__label(for="star3") ★
+                          input.pick-rate__input(type="radio" id="star2" name="rate" value="2")
+                          label.pick-rate__label(for="star2") ★
+                          input.pick-rate__input(type="radio" id="star1" name="rate" value="1")
+                          label.pick-rate__label(for="star1") ★
+                  textarea.feedback__message(rows="10" cols="45" name="feedback-message" placeholder="Текст отзыва")
+                  .feedback__footer
+                    .feedback__captcha
+                      img(src=`${baseDir}assets/img/card/captcha.jpg`, alt="")
+                    button.btn.feedback__btn(href="#" type="submit") Отправить
+
+        // Позвоните нам
+        .callus.landing__callus
+          .container-fluid
+            .callus__container
+              .callus__col
+                h3.title-md.callus__title Просто позвоните нам
+                a.callus__phone(href="tel:+74954340900") +7 (495) 434-09-00
+              .callus__col
+                p.callus__descr Мы расскажем о самых выгодных акциях и предложениях. 
+                  br
+                  | Ответим на все интересующие вас вопросы. 
+                  br
+                  | Предложим чай с печеньками в офисе продаж.
+
+      .landing
+        .container-fluid
+          .breadcrumbs.landing__breadcrumbs
+            .breadcrumbs__item 
+              a.breadcrumbs__link(href="#") Главная
+            .breadcrumbs__item 
+              a.breadcrumbs__link(href="#") Новостройки
+            .breadcrumbs__item ЖК Ясный
+          .card__header-name
+            .card__logo
+              img(src=`${baseDir}assets/img/landing/logo-complex/img-1.jpg`, alt="")
+            h4.title-md.card__name ЖК Ясный
+            .card__wrapper-rate
+              .rate.card__rate
+                span.rate__star.rate__star_checked ★
+                span.rate__star.rate__star_checked ★
+                span.rate__star.rate__star_checked ★
+                span.rate__star.rate__star_checked ★
+                span.rate__star ★
+              span.card__comments 13 отзывов
+            a.card__phone(href="tel:84954523245") 8 (495) 452-32-45
+            address.card__address Москва, Каштановая аллея, д.5
+          
+          // Слайдер 1
+          .module-slider.landing__module-slider
+            img.module-slider__img(src=`${baseDir}assets/img/landing/slider/img-1.jpg`, alt="")
+            a.module-slider__prev(href="#")
+              +svg('arrow-left', 'module-slider__icon-left')
+            a.module-slider__next(href="#")
+              +svg('arrow-right', 'module-slider__icon-right')
+            .module-slider__nav
+              span.module-slider__dot
+              span.module-slider__dot
+              span.module-slider__dot.module-slider__dot_active
+              span.module-slider__dot
+              span.module-slider__dot
+              span.module-slider__dot
+        
+        // Фичи
+        .features.landing__features
+          .bg-wrapper-light
+            .container-fluid
+              h3.title-md.features__head-title Почему выбирают ЖК “Ясный”
+              .features__list
+                .features__col
+                  .features__item
+                    span.features__numb 1
+                    p.features__descr До метро 8 минут на машине, 
+                      br
+                      | если ехать не быстро
+                .features__col
+                  .features__item
+                    span.features__numb 2
+                    p.features__descr Дома стоят напротив живописной бухты с собственным пляжем
+                .features__col
+                  .features__item
+                    span.features__numb 3
+                    p.features__descr До метро 8 минут на машине,
+                      br
+                      | если ехать не быстро
+        
+        // О комплексе
+        .about-complex
+          .container-fluid
+            .about-complex__row
+              .about-complex__col
+                .about-complex__item
+                  .about-complex__left-content
+                    h3.title-md.about-complex__title Застройщик 
+                      br
+                      | ГК Гранель
+                    ul.about-complex-list
+                      li.about-complex-list__item Год основания: 
+                        span.about-complex-list__value 1992
+                      li.about-complex-list__item Комплексов строится: 
+                        span.about-complex-list__value 8
+                      li.about-complex-list__item Комплексов сдано: 
+                        span.about-complex-list__value 7
+                      li.about-complex-list__item Место в ТОП10 застройщиков РФ: 
+                        span.about-complex-list__value 8
+                  .about-complex__right-content
+                    img.about-complex__logo(src=`${baseDir}assets/img/landing/logo-complex/img-2.jpg`, alt="")
+              .about-complex__col
+                .about-complex__item
+                  p.about-complex__descr Один из крупнейших девелоперов Москвы, чьи интересы распространяются на столичный регион и Подмосковье. Реализуемые сегменты недвижимости — гостиницы и жилые комплексы стандарт- и комфорт-класса с объектами инфраструктуры: школами, детскими садами, паркингами, поликлиниками, спортивными и торговыми центрами. Создаются малоэтажные индивидуальные проекты и типовые высотные дома комплексной застройки. В портфеле несколько объектов-долгостроев других организаций, по которым приняты и исполнены обязательства помочь обманутым дольщикам. Технологии и материалы строительства: панель, монолит, кирпич. Среди финансовых партнеров крупнейшие банки страны: Сбербанк, Газпромбанк, ВТБ.
+              .about-complex__col
+                .about-complex__item
+                  .about-complex__left-content
+                    h3.title-md.about-complex__title Квартиры 
+                      br
+                      | в продаже
+                    ul.about-complex-list
+                      li.about-complex-list__item.about-complex-list__item_black Студия от 130 150 руб/м2  (от 12м2)
+                      li.about-complex-list__item.about-complex-list__item_black 1-комн. от 132 280 руб/м2  (от 39м2)
+                      li.about-complex-list__item.about-complex-list__item_black 2-комн. от 159 590 руб/м2  (от 49м2)
+                      li.about-complex-list__item.about-complex-list__item_black 3-комн. от 170 340 руб/м2  (от 68м2)
+                      li.about-complex-list__item.about-complex-list__item_black 4-комн. от 171 532 руб/м2  (от 120м2)
+                  .about-complex__right-content
+                    .about-complex__circle
+                      img(src=`${baseDir}assets/img/landing/icons/icon-1.png`, alt="")
+              .about-complex__col
+                .about-complex__item
+                  .about-complex__left-content
+                    h3.title-md.about-complex__title ЖК “Малина”
+                      br
+                      | в цифрах
+                    ul.about-complex-list
+                      li.about-complex-list__item Этажность: 
+                        span.about-complex-list__value 24
+                      li.about-complex-list__item Количество домов: 
+                        span.about-complex-list__value 5
+                      li.about-complex-list__item Высота потолков: 
+                        span.about-complex-list__value 2,5м
+                      li.about-complex-list__item Отделка: 
+                        span.about-complex-list__value есть
+                      li.about-complex-list__item Тип стен: 
+                        span.about-complex-list__value кирпич
+                  .about-complex__right-content
+                    .about-complex__circle
+                      img(src=`${baseDir}assets/img/landing/icons/icon-2.png`, alt="")
+ 
+        .container-fluid
+          // Акции
+          .sale
+            .sale__row
+              .sale__col
+                .sale__item
+                  h3.sale__title 2+1
+                  p.sale__descr Год основания
+              .sale__col
+                .sale__item
+                  h3.sale__title Скидки!
+                  p.sale__descr Средняя оценка жильцов комплека
+              .sale__col
+                .sale__item
+                  h3.sale__title 360 скидок
+                  p.sale__descr Квартир сдано
+              .sale__col
+                .sale__item
+                  h3.sale__title Акция
+                  p.sale__descr Место в ТОП 10 застройщиков РФ
+
+          // Связатся
+          .connection
+            h3.title-md.connection__title Свяжитесь с нами удобным для вас способом
+            .connection__btns
+              a.btn.connection__btn(href="") Позвоните мне
+              a.btn.connection__btn.connection__btn_grey.js-phone-connection(href="#") 
+                span.connection__name Показать телефон
+                span.connection__phone(data-phone="8 (495) 452-32-45") 8 (495) 452-32-XX
+
+          // Список Квартир
+          .section-rooms
+            h3.title-md.section-rooms__head-title Квартиры в ЖК Ясный
+            form.filter-rooms(action="#")
+              .rooms-opts.filter-rooms__rooms-opts
+                .rooms-opts__item
+                  .facing
+                    .facing__field
+                      input#facing-off.facing__input(name="facing" type="radio")
+                      label.facing__label(for="facing-off") Без отделки
+                    .facing__toggle.facing__toggle_active
+                    .facing__field
+                      input#facing-on.facing__input(name="facing" type="radio" checked)
+                      label.facing__label(for="facing-on") C отделкой
+                    .tooltip-facing
+                      a.tooltip-facing__link(href="#") ?
+                      .tooltip-facing__content
+                        p.tooltip-facing__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum nulla, debitis molestiae quaerat harum perferendis ipsum. Facere cum at eligendi repellat deleniti ab quod dolore reprehenderit sed aut, alias cupiditate.
+                .rooms-opts__item
+                  .swipe-icon.rooms-opts__swipe-icon
+                  .rooms-opts__scroll
+                    .select-room
+                      .select-room__field
+                        input#room-1.select-room__input(name="rooms" type="radio")
+                        label.select-room__label(for="room-1") студии
+                      .select-room__field
+                        input#room-2.select-room__input(name="rooms" type="radio" checked)
+                        label.select-room__label(for="room-2") 1-комнатные
+                      .select-room__field
+                        input#room-3.select-room__input(name="rooms" type="radio")
+                        label.select-room__label(for="room-3") 2-комнатные
+                      .select-room__field
+                        input#room-4.select-room__input(name="rooms" type="radio")
+                        label.select-room__label(for="room-4") 3-комнатные
+                      .select-room__field
+                        input#room-5.select-room__input(name="rooms" type="radio")
+                        label.select-room__label(for="room-5") 4 и более комнат
+            .table-rooms
+              .swipe-icon.table-rooms__swipe-icon
+              .scroll-table.table-rooms__scroll-table
+                .table-rooms__head
+                  .table-rooms__row.table-rooms__row_head
+                    .table-rooms__cell.table-rooms__cell_1
+                      .sort.table-rooms__sort
+                        .sort__text Комнатность
+                    .table-rooms__cell.table-rooms__cell_2
+                      .sort.table-rooms__sort
+                        .sort__text Общая площадь
+                        a.sort__arrow.sort__arrow_down(href="#")
+                    .table-rooms__cell.table-rooms__cell_3
+                      .sort.table-rooms__sort
+                        .sort__text Этаж
+                        a.sort__arrow(href="#")
+                    .table-rooms__cell.table-rooms__cell_4
+                      .sort.table-rooms__sort
+                        .sort__text Цена, руб
+                        a.sort__arrow(href="#")
+                    .table-rooms__cell.table-rooms__cell_5
+                      .sort.table-rooms__sort
+                        .sort__text Ипотекa, руб/мес
+                        a.sort__arrow(href="#")
+                    .table-rooms__cell.table-rooms__cell_6
+                    .table-rooms__cell.table-rooms__cell_7
+                .table-rooms__body
+                  .table-rooms__row
+                    .table-rooms__cell.table-rooms__cell_1 
+                      a.table-rooms__link(href="#") 1-комнатная
+                    .table-rooms__cell.table-rooms__cell_2 39.4 м
+                      sup 2
+                    .table-rooms__cell.table-rooms__cell_3 2
+                    .table-rooms__cell.table-rooms__cell_4 1 890 000
+                    .table-rooms__cell.table-rooms__cell_5 20 350
+                    .table-rooms__cell.table-rooms__cell_6 
+                      a.similar.js-popup-similar(href="#")
+                        img.similar__svg(src=`${baseDir}assets/img/icons/menu-orange.svg`, alt="")
+                        span.similar__text 7 похожих
+                    .table-rooms__cell.table-rooms__cell_7
+                      a.favorite(href="#")
+                        +svg("star", "favorite__icon")
+                  .table-rooms__row
+                    .table-rooms__cell.table-rooms__cell_1 
+                      a.table-rooms__link(href="#") 3-комнатная
+                    .table-rooms__cell.table-rooms__cell_2 49.4 м
+                      sup 2
+                    .table-rooms__cell.table-rooms__cell_3 2
+                    .table-rooms__cell.table-rooms__cell_4 2 890 000
+                    .table-rooms__cell.table-rooms__cell_5 20 350
+                    .table-rooms__cell.table-rooms__cell_6 
+                      a.similar.js-popup-similar(href="#")
+                        img.similar__svg(src=`${baseDir}assets/img/icons/menu-orange.svg`, alt="")
+                        span.similar__text 7 похожих
+                    .table-rooms__cell.table-rooms__cell_7
+                      a.favorite.favorite_active(href="#")
+                        +svg("star", "favorite__icon")
+                  .table-rooms__row
+                    .table-rooms__cell.table-rooms__cell_1 
+                      a.table-rooms__link(href="#") 2-комнатная
+                    .table-rooms__cell.table-rooms__cell_2 49.4 м
+                      sup 2
+                    .table-rooms__cell.table-rooms__cell_3 2
+                    .table-rooms__cell.table-rooms__cell_4 2 890 000
+                    .table-rooms__cell.table-rooms__cell_5 20 350
+                    .table-rooms__cell.table-rooms__cell_6 
+                      a.similar.js-popup-similar(href="#")
+                        img.similar__svg(src=`${baseDir}assets/img/icons/menu-orange.svg`, alt="")
+                        span.similar__text 7 похожих
+                    .table-rooms__cell.table-rooms__cell_7
+                      a.favorite(href="#")
+                        +svg("star", "favorite__icon")
+                  .table-rooms__row
+                    .table-rooms__cell.table-rooms__cell_1 
+                      a.table-rooms__link(href="#") 2-комнатная
+                    .table-rooms__cell.table-rooms__cell_2 49.4 м
+                      sup 2
+                    .table-rooms__cell.table-rooms__cell_3 2
+                    .table-rooms__cell.table-rooms__cell_4 2 890 000
+                    .table-rooms__cell.table-rooms__cell_5 20 350
+                    .table-rooms__cell.table-rooms__cell_6 
+                      a.similar.js-popup-similar(href="#")
+                        img.similar__svg(src=`${baseDir}assets/img/icons/menu-orange.svg`, alt="")
+                        span.similar__text 7 похожих
+                    .table-rooms__cell.table-rooms__cell_7
+                      a.favorite(href="#")
+                        +svg("star", "favorite__icon")
+                  .table-rooms__row
+                    .table-rooms__cell.table-rooms__cell_1 
+                      a.table-rooms__link(href="#") 2-комнатная
+                    .table-rooms__cell.table-rooms__cell_2 49.4 м
+                      sup 2
+                    .table-rooms__cell.table-rooms__cell_3 2
+                    .table-rooms__cell.table-rooms__cell_4 2 890 000
+                    .table-rooms__cell.table-rooms__cell_5 20 350
+                    .table-rooms__cell.table-rooms__cell_6 
+                      a.similar.js-popup-similar(href="#")
+                        img.similar__svg(src=`${baseDir}assets/img/icons/menu-orange.svg`, alt="")
+                        span.similar__text 7 похожих
+                    .table-rooms__cell.table-rooms__cell_7
+                      a.favorite(href="#")
+                        +svg("star", "favorite__icon")
+              a.btn.table-rooms__more(href="#") Показать все
+
+          // Слайдер отделки
+          h3.title-md.landing__slider-title Варианты отделки в ЖК Ясный
+          .module-slider
+            img.module-slider__img(src=`${baseDir}assets/img/landing/slider/img-1.jpg`, alt="")
+            a.module-slider__prev(href="#")
+              +svg('arrow-left', 'module-slider__icon-left')
+            a.module-slider__next(href="#")
+              +svg('arrow-right', 'module-slider__icon-right')
+            .module-slider__nav
+              span.module-slider__dot
+              span.module-slider__dot
+              span.module-slider__dot.module-slider__dot_active
+              span.module-slider__dot
+              span.module-slider__dot
+              span.module-slider__dot
+          
+        // Карта комплекса
+        .map
+          #gk-map.map__gk
+
+        // Время до метро
+        .time-metro
+          .container-fluid
+            h3.title-md.time-metro__head-title Время до метро
+            .swipe-icon.time-metro__swipe-icon
+            .time-metro__scroll
+              .list-time-metro.time-metro__list-time-metro
+                .list-time-metro__item
+                  .list-time-metro__top
+                    span.list-time-metro__circle
+                    span.list-time-metro__name Арбатско-Покровская
+                  .list-time-metro__footer
+                    span.list-time-metro__metro
+                      +svg('train', 'list-time-metro__icon')
+                      | 15 мин.
+                    .list-time-metro__walk
+                      +svg('walk', 'list-time-metro__icon')
+                      | 50 мин.
+                .list-time-metro__item
+                  .list-time-metro__top
+                    span.list-time-metro__circle
+                    span.list-time-metro__name Филёвская 
+                  .list-time-metro__footer
+                    span.list-time-metro__metro
+                      +svg('train', 'list-time-metro__icon')
+                      | 4 мин.
+                    .list-time-metro__walk
+                      +svg('walk', 'list-time-metro__icon')
+                      | 15 мин.
+                .list-time-metro__item
+                  .list-time-metro__top
+                    span.list-time-metro__circle
+                    span.list-time-metro__name Серпуховско-Тимирязевская 
+                  .list-time-metro__footer
+                    span.list-time-metro__metro
+                      +svg('train', 'list-time-metro__icon')
+                      | 10 мин.
+                    .list-time-metro__walk
+                      +svg('walk', 'list-time-metro__icon')
+                      | 35 мин.
+                .list-time-metro__item
+                  .list-time-metro__top
+                    span.list-time-metro__circle
+                    span.list-time-metro__name Кольцевая 
+                  .list-time-metro__footer
+                    span.list-time-metro__metro
+                      +svg('train', 'list-time-metro__icon')
+                      | 8 мин.
+                    .list-time-metro__walk
+                      +svg('walk', 'list-time-metro__icon')
+                      | 20 мин.
+
+        // Инфраструктура
+        .container-fluid
+          .infrastructure
+            .infrastructure__row
+              .infrastructure__col.infrastructure__col_1
+                .infrastructure__photo(style=`background-image: url(${baseDir}assets/img/landing/infrastructure/img-3.jpg)`)
+                .infrastructure__info
+                  h3.title-md.infrastructure__title 2 школы и 4 детских сада
+                  p.infrastructure__descr Школьные здания современной планировки рассчитаны на 2200 учеников. Дошкольные учреждения примут в своих стенах 800 малышей
+              .infrastructure__col.infrastructure__col_2
+                .infrastructure__photo(style=`background-image: url(${baseDir}assets/img/landing/infrastructure/img-2.jpg)`)
+                .infrastructure__info
+                  h3.title-md.infrastructure__title Поликлиника
+                  p.infrastructure__descr В центре ""Европейский стандарт здоровья"" квалифицированные медики, современное оборудование. До 600 посещений в день без очередей
+              .infrastructure__col.infrastructure__col_3
+                .infrastructure__photo(style=`background-image: url(${baseDir}assets/img/landing/infrastructure/img-4.jpg)`)
+                .infrastructure__info
+                  h3.title-md.infrastructure__title Парковка без проблем
+                  p.infrastructure__descr Наземный многоуровневый паркинг рассчитан на 6050 автомобилей, что позволит максимально освободить дворы комплекса от машин
+              .infrastructure__col.infrastructure__col_4
+                .infrastructure__photo(style=`background-image: url(${baseDir}assets/img/landing/infrastructure/img-2.jpg)`)
+                .infrastructure__info
+                  h3.title-md.infrastructure__title Все необходимое рядом
+                  p.infrastructure__descr Многофункциональный центр ""Мои документы"", физкультурный комплекс с бассейном, торгово-офисный центр, магазины, аптеки, салоны
+              .infrastructure__col.infrastructure__col_5
+                .infrastructure__photo(style=`background-image: url(${baseDir}assets/img/landing/infrastructure/img-5.jpg)`)
+        
+        // Банки партнеры
+        .bg-wrapper-light
+          .banklist
+            .container-fluid
+              h3.title-md.banklist__head-title Банки-партнеры
+              .table-banks
+                .swipe-icon.table-banks__swipe-icon
+                .scroll-table.table-banks__scroll-table
+                  .table-banks__head
+                    .table-banks__row.table-banks__row_head
+                      .table-banks__cell.table-banks__cell_1
+                        span.table-banks__head-title наименование
+                      .table-banks__cell.table-banks__cell_2
+                        span.table-banks__head-title ип. ставка%
+                      .table-banks__cell.table-banks__cell_3
+                        span.table-banks__head-title взнос
+                      .table-banks__cell.table-banks__cell_4
+                        span.table-banks__head-title кредит
+                  .table-banks__body
+                    .table-banks__row
+                      .table-banks__cell.table-banks__cell_1 
+                        a.table-banks__link(href="#") Дельта кредит банк
+                      .table-banks__cell.table-banks__cell_2 10,95
+                      .table-banks__cell.table-banks__cell_3 15%
+                      .table-banks__cell.table-banks__cell_4 до 25 лет
+                    .table-banks__row
+                      .table-banks__cell.table-banks__cell_1 
+                        a.table-banks__link(href="#") Сбербанк
+                      .table-banks__cell.table-banks__cell_2 12,95
+                      .table-banks__cell.table-banks__cell_3 15%
+                      .table-banks__cell.table-banks__cell_4 до 25 лет
+                    .table-banks__row
+                      .table-banks__cell.table-banks__cell_1 
+                        a.table-banks__link(href="#") Альфабанк
+                      .table-banks__cell.table-banks__cell_2 13,95
+                      .table-banks__cell.table-banks__cell_3 15%
+                      .table-banks__cell.table-banks__cell_4 до 25 лет
+                    .table-banks__row
+                      .table-banks__cell.table-banks__cell_1 
+                        a.table-banks__link(href="#") Сельхозпромсвязь банк
+                      .table-banks__cell.table-banks__cell_2 10,95
+                      .table-banks__cell.table-banks__cell_3 15%
+                      .table-banks__cell.table-banks__cell_4 до 25 лет
+                    .table-banks__row
+                      .table-banks__cell.table-banks__cell_1 
+                        a.table-banks__link(href="#") Райффайзен банк
+                      .table-banks__cell.table-banks__cell_2 10,95
+                      .table-banks__cell.table-banks__cell_3 15%
+                      .table-banks__cell.table-banks__cell_4 до 25 лет
+              a.btn.banklist__more-banks(href="#") Показать все
+        
+        // Связатся
+        .container-fluid
+          .connection
+            h3.title-md.connection__title Свяжитесь с нами удобным для вас способом
+            .connection__btns
+              a.btn.connection__btn(href="") Позвоните мне
+              a.btn.connection__btn.connection__btn_grey.js-phone-connection(href="#") 
+                span.connection__name Показать телефон
+                span.connection__phone(data-phone="8 (495) 452-32-45") 8 (495) 452-32-XX

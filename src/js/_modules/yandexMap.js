@@ -5,41 +5,33 @@ export default () => {
   const yaMap = document.getElementById('ya-map');
   const yaMap2 = document.getElementById('ya-map2');
 
-  // On scroll
-  window.addEventListener('scroll', function() {
-    const scrollBarPosition = window.pageYOffset | document.body.scrollTop;
+  // // On scroll
+  // window.addEventListener('scroll', function() {
+  //   const scrollBarPosition = window.pageYOffset | document.body.scrollTop;
 
-    if ( !YaMapsShown ) {
-      if ( yaMap ) {
-        if ( scrollBarPosition > yaMap.offsetTop - window.innerHeight ) { 
-          loadYaMaps();
-          YaMapsShown = true;
-        }
-      }
-      if ( yaMap2 ) {
-        if ( scrollBarPosition > yaMap2.offsetTop - window.innerHeight ) {
-          loadYaMaps();
-          YaMapsShown = true;
-        }
-      }
-    } 
-  });
+  //   if ( !YaMapsShown ) {
+  //     if ( yaMap ) {
+  //       if ( scrollBarPosition > yaMap.offsetTop - window.innerHeight ) { 
+  //         loadYaMaps();
+  //         YaMapsShown = true;
+  //       }
+  //     }
+  //     if ( yaMap2 ) {
+  //       if ( scrollBarPosition > yaMap2.offsetTop - window.innerHeight ) {
+  //         loadYaMaps();
+  //         YaMapsShown = true;
+  //       }
+  //     }
+  //   } 
+  // });
 
   // on Load dom
-  setTimeout(() => {
-    if ( yaMap ) {
-      if ( yaMap.offsetTop <= window.innerHeight ) { 
-        loadYaMaps();
-        YaMapsShown = true;
-      }
-    }
-    if ( yaMap2 ) {
-      if ( yaMap.offsetTop <= window.innerHeight ) { 
-        loadYaMaps();
-        YaMapsShown = true;
-      }
-    }
-  }, 2000);
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      loadYaMaps();
+      YaMapsShown = true;
+    }, 2000);
+  });
 
   // Load scripts
   function loadYaMaps() {
