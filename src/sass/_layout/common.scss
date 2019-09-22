@@ -6,6 +6,7 @@ body {
   width: 100%;
 }
 body {
+  opacity: 1 !important;
   overflow-x:hidden;
   overflow-y: auto;
   &.overflowed {
