@@ -1,0 +1,60 @@
+@import '_components/variables';
+@import '_components/mixins';
+
+.youtube {
+  position: relative;
+  width: 100%;
+  max-width: 840px;
+  display: block;
+  margin: 30px auto 50px auto;
+  @include below(500px) {
+    margin: 30px auto 40px auto;
+  }
+  &__player {
+    position: relative;
+    background-color: #000;
+    margin-bottom: 30px;
+    padding-top: 56.25%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  img {
+    position: absolute;
+    width: 100%;
+    top: -16.82%;
+    left: 0;
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  iframe {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  &__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d( -50%, -50%, 0 );
+    width: 90px;
+    height: 60px;
+    background-color: #333;
+    box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
+    z-index: 1;
+    opacity: 0.8;
+    border-radius: 6px;
+    cursor: pointer;
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d( -50%, -50%, 0 );
+      content: "";
+      border-style: solid;
+      border-width: 15px 0 15px 26.0px;
+      border-color: transparent transparent transparent #fff;
+    }
+  }
+}

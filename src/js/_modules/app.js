@@ -8,6 +8,7 @@ import 'waypoints/lib/noframework.waypoints.js';
 import { 
   toggleScroll,
   hasClass,
+  youtube,
 } from './functions.js';
 import yandexMap from './yandexMap.js';
 
@@ -25,10 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
   (function() {
     const loader = document.querySelector('.loader');
 
-    loader.style.opacity = 0;
-    setTimeout(() => {
-      loader.style.display = 'none';
-    }, 50)
+    loader.classList.add('loader_hide');
+    toggleScroll('show');
   })();
 
   // Animations
@@ -68,8 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   })();
-  
-
 
   // Menu
   const btnMenu = document.querySelector('.btn-menu');
@@ -666,3 +663,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Init Map
 yandexMap();
+
+// Init YouTube player
+youtube();
