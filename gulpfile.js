@@ -187,6 +187,14 @@ gulp.task('watch', function() {
   gulp.watch(path.watch.svgSprite, gulp.series('svgSprite'));
 });
 
+/////////////////////////////// DEFAULT
+gulp.task('default', gulp.series(
+  gulp.parallel('clean:build'),
+  gulp.parallel('htmlReload', 'styleReload', 'js:build'),
+  gulp.parallel('img:build', 'fonts:build', 'resources:build', 'pngSprite', 'svgSprite'),
+  gulp.parallel('browser-sync', 'watch')
+));
+
 /////////////////////////////// MIN IMGS 
 gulp.task('img', async function() {
   return gulp.src(path.src.img)
@@ -199,15 +207,9 @@ gulp.task('img', async function() {
 gulp.task('deploy', async function () {
   return surge({
     project: './build',           // Path to your static build directory
-    domain: 'flow-flow.surge.sh'  // Your domain or Surge subdomain
+    domain: 'flex-flex.surge.sh'  // Your domain or Surge subdomain
   })
 })
 
-/////////////////////////////// DEFAULT
-gulp.task('default', gulp.series(
-  gulp.parallel('clean:build'),
-  gulp.parallel('htmlReload', 'styleReload', 'js:build'),
-  gulp.parallel('img:build', 'fonts:build', 'resources:build', 'pngSprite', 'svgSprite'),
-  gulp.parallel('browser-sync', 'watch')
-));
+
 

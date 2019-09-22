@@ -5,33 +5,31 @@ export default () => {
   const yaMap = document.getElementById('ya-map');
   const yaMap2 = document.getElementById('ya-map2');
 
-  // // On scroll
-  // window.addEventListener('scroll', function() {
-  //   const scrollBarPosition = window.pageYOffset | document.body.scrollTop;
-
-  //   if ( !YaMapsShown ) {
-  //     if ( yaMap ) {
-  //       if ( scrollBarPosition > yaMap.offsetTop - window.innerHeight ) { 
-  //         loadYaMaps();
-  //         YaMapsShown = true;
-  //       }
-  //     }
-  //     if ( yaMap2 ) {
-  //       if ( scrollBarPosition > yaMap2.offsetTop - window.innerHeight ) {
-  //         loadYaMaps();
-  //         YaMapsShown = true;
-  //       }
-  //     }
-  //   } 
-  // });
+  // On scroll
+  document.addEventListener("DOMContentLoaded", () => {
+    if ( yaMap ) {
+      const waypoint = new Waypoint({
+        element: yaMap,
+        handler: function(direction) {
+          if( direction === 'down' ) {
+            loadYaMaps();
+            YaMapsShown = true;
+            // load once
+            this.destroy();
+          }
+        },
+        offset: '100%'
+      });
+    }
+  });
 
   // on Load dom
-  document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-      loadYaMaps();
-      YaMapsShown = true;
-    }, 2000);
-  });
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   setTimeout(() => {
+  //     loadYaMaps();
+  //     YaMapsShown = true;
+  //   }, 2000);
+  // });
 
   // Load scripts
   function loadYaMaps() {

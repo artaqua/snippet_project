@@ -5,7 +5,6 @@ block vars
     var baseDir = ''
   -
     var title = typeof title !== 'undefined' ? title : null
-    var description = typeof description !== 'undefined' ? description : null
 
 doctype html
 html(lang="ru")
@@ -15,23 +14,28 @@ html(lang="ru")
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
     meta(name="format-detection" content="telephone=no")
-    meta(name='description', content=`${description}`)
-    link(href=`${baseDir}assets/img/favicon.ico` rel='shortcut icon')
+    meta(name='description', content="")
+    link(href="assets/img/favicon.ico" rel='shortcut icon')
     block styles
 
-  body.layout
-    // Header
-    include _layout/header.pug
-    // Sidebar menu
-    include _layout/sidebar-menu.pug
-    // Content
-    block content
-    // Footer
-    include _layout/footer.pug
+  body
+
+    // Loader
+    include _layout/loader.pug
+
+    .layout
+      // Header
+      include _layout/header.pug
+      // Sidebar menu
+      include _layout/sidebar-menu.pug
+      // Content
+      block content
+      // Footer
+      include _layout/footer.pug
 
     // Scripts
     block scripts
-      script(src=`${baseDir}assets/js/bundle.js?v=${Date.now()}`)
+      script(src=`assets/js/bundle.js`)
     
 
   

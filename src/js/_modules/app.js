@@ -3,11 +3,14 @@
 import LazyLoad from 'vanilla-lazyload';
 import Swiper from 'swiper';
 import 'lightgallery.js';
+import anime from 'animejs/lib/anime.es.js';
+import 'waypoints/lib/noframework.waypoints.js';
 import { 
   toggleScroll,
   hasClass,
 } from './functions.js';
 import yandexMap from './yandexMap.js';
+
 
 // Lazy load
 let lazyLoadInstance = new LazyLoad({
@@ -17,6 +20,56 @@ let lazyLoadInstance = new LazyLoad({
 // APP
 // Event DOM Ready
 document.addEventListener("DOMContentLoaded", () => {
+
+  // Loader Page
+  (function() {
+    const loader = document.querySelector('.loader');
+
+    loader.style.opacity = 0;
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 50)
+  })();
+
+  // Animations
+  (function () {
+    const animElems = document.querySelector('.animation-elem');
+
+    anime({
+      targets: '.animation-elem',
+      opacity: 0,
+      duration: 0
+    });
+
+    function doAnimate() {
+      anime({
+        targets: '.animation-elem',
+        easing: 'easeOutElastic',
+        scale: [0.8,1],
+        opacity: [0,1],
+        translateY: ['200px',0],
+        duration: 2000,
+        delay: anime.stagger(100, {start: 500})
+      });
+    }
+
+    // Когда доскролили до елемента начать анимацию
+    if ( animElems ) {
+      const waypoint = new Waypoint({
+        element: animElems,
+        handler: function(direction) {
+          if( direction === 'down' ) {
+            doAnimate();
+            // Animate once
+            this.destroy();
+          }
+        },
+        offset: '100%'
+      });
+    }
+  })();
+  
+
 
   // Menu
   const btnMenu = document.querySelector('.btn-menu');
@@ -28,6 +81,16 @@ document.addEventListener("DOMContentLoaded", () => {
         btnMenu.classList.add('btn-menu_active')
         sidebarMenu.classList.add('sidebar-menu_active');
         toggleScroll('hide');
+
+        anime({
+          targets: '.list-nav-sidebar__item',
+          easing: 'easeOutBack',
+          opacity: [0,1],
+          translateX: ['20px',0],
+          rotateX: [90,0],
+          duration: 800,
+          delay: anime.stagger(100, {start: 300})
+        });
       } else {
         btnMenu.classList.remove('btn-menu_active')
         sidebarMenu.classList.remove('sidebar-menu_active');
@@ -497,87 +560,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }, false);
     }
   })();
-
-  // Init complex
-  let map;
-  const mapComplex = document.getElementById('complex-map');
-  const mapGk = document.getElementById('gk-map');
-  if (typeof(mapComplex) != 'undefined' && mapComplex != null) {
-    ymaps.ready(initMap);
-
-    function initMap() {
-      map = new ymaps.Map("complex-map", {
-        center: [55.9100, 37.6500],
-        zoom: 13,
-        controls: ['zoomControl', 'typeSelector', 'geolocationControl']
-      },{
-        autoFitToViewport: 'always'
-      });
-     
-
-      const MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        // '<div class="marker">$[properties.iconContent]</div>'
-        '<div class="marker"><div class="marker__circle"><img class="marker__icon" src="assets/img/markers/marker-complex.png" alt="" /></div><span class="marker__text">$[properties.iconContent]</span></div>'
-      );
-      const myPlacemarkWithContent = new ymaps.Placemark([55.9100, 37.6500], {
-        iconContent: 'от 20.7 млн',
-      }, {
-        // Опции.
-        // Необходимо указать данный тип макета.
-        iconLayout: 'default#imageWithContent',
-        // Размеры метки.
-        iconImageSize: [100, 22],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        iconImageOffset: [-50, -11],
-        // Смещение слоя с содержимым относительно слоя с картинкой.
-        iconContentOffset: [0, 0],
-        // Макет содержимого.
-        iconContentLayout: MyIconContentLayout
-      });
-      map.geoObjects.add(myPlacemarkWithContent);
-
-      // Click
-      myPlacemarkWithContent.events.add("click", function (e) {
-        document.querySelector('.map').classList.add('map_open');
-        map.container.fitToViewport();
-      });
-
-
-      ymapsTouchScroll(map);
-    }
-  }
-
-  if (typeof(mapGk) != 'undefined' && mapGk != null) {
-    ymaps.ready(initMap);
-
-    function initMap() {
-      map = new ymaps.Map("gk-map", {
-        center: [55.9100, 37.6500],
-        zoom: 13,
-        controls: ['zoomControl', 'typeSelector', 'geolocationControl']
-      },{
-        autoFitToViewport: 'always'
-      });
-
-      var placemark = new ymaps.Placemark([55.9100, 37.6500]);
-      // Добавление метки на карту
-      map.geoObjects.add(placemark);
-
-
-      ymapsTouchScroll(map);
-    }
-  }
-
-  // Close info map 
-  const linkCloseInfoMap = document.querySelector('.list-offer__close');
-  if (linkCloseInfoMap) {
-    linkCloseInfoMap.addEventListener('click', (event) => {
-      event.preventDefault();
-      document.querySelector('.map').classList.remove('map_open');
-      map.container.fitToViewport();
-    }, false);
-  }
 
   // Show full phone
   const connectionPhones = document.querySelectorAll('.js-phone-connection');

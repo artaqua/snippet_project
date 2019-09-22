@@ -1,0 +1,46 @@
+.loader {
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: $white;
+  transition: all 500ms ease;
+  &__elems {
+    width: 50px;
+    height: 50px;
+    animation: rotateLoader 1.6s linear infinite;
+    transform-origin: bottom center;
+  }
+  &__circle {
+    animation: growLoader 1.2s linear infinite;
+    background-color: $orange;
+    border-radius: 50%;
+    display: inline-block;
+    margin: -10px;
+    height: 40px;
+    width: 40px;
+    transform: scale(0);
+    &_two {
+      animation-delay: .6s;
+      background-color: $yellow;
+    }
+  }
+}
+
+@keyframes rotateLoader {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes growLoader {
+  50% {
+    transform: scale(1);
+  }
+}
