@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const loader = document.querySelector('.loader');
 
     loader.classList.add('loader_hide');
-    toggleScroll('show');
   })();
 
   // Animations
