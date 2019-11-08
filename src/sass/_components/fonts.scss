@@ -1,21 +1,21 @@
 /* Fonts */
 @font-face {
-  font-display: swap;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-display: optional;
+  font-family: 'Open Sans';
   src: local('Open Sans'), url('../fonts/OpenSans-Regular-webfont.woff') format('woff');
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-display: swap;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-display: optional;
+  font-family: 'Open Sans';
   src: local('Open Sans'), url('../fonts/OpenSans-Light-webfont.woff') format('woff');
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
-  font-display: swap;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-display: optional;
+  font-family: 'Open Sans';
   src: local('Open Sans'), url('../fonts/OpenSans-Bold-webfont.woff') format('woff');
   font-style: normal;
   font-weight: 700;

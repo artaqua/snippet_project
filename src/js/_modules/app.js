@@ -13,12 +13,11 @@ import {
 import yandexMap from './yandexMap.js';
 
 
-// Lazy load
+// APP
 let lazyLoadInstance = new LazyLoad({
   elements_selector: ".lazy"
 });
 
-// APP
 // Event DOM Ready
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -28,6 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loader.classList.add('loader_hide');
   })();
+
+  // Lazy load
+  lazyLoadInstance.loadAll();
 
   // Animations
   (function () {
