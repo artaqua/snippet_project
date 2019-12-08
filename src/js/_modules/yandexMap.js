@@ -1,7 +1,6 @@
 import ymapsTouchScroll from 'ymaps-touch-scroll';
 
 export default () => {
-  let YaMapsShown = false;
   const yaMap = document.getElementById('ya-map');
   const yaMap2 = document.getElementById('ya-map2');
 
@@ -13,7 +12,6 @@ export default () => {
         handler: function(direction) {
           if( direction === 'down' ) {
             loadYaMaps();
-            YaMapsShown = true;
             // load once
             this.destroy();
           }
@@ -23,12 +21,13 @@ export default () => {
     }
   });
 
-  // on Load dom
+  // // on Load dom
   // document.addEventListener("DOMContentLoaded", () => {
-  //   setTimeout(() => {
-  //     loadYaMaps();
-  //     YaMapsShown = true;
-  //   }, 2000);
+  //   if ( yaMap ) {
+  //     setTimeout(() => {
+  //       loadYaMaps();
+  //     }, 2000);
+  //   }
   // });
 
   // Load scripts

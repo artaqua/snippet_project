@@ -107,7 +107,6 @@ gulp.task('style:build', function(done) {
     .pipe(gulp.dest(path.build.css))
     .pipe(browserSync.stream());
 });
-gulp.task('styleReload', gulp.series('style:build', bsReload));
 
 gulp.task('js:build', function(done) {
   return gulp.src('src/entry.js', { 
@@ -178,7 +177,7 @@ gulp.task('svgSprite', function(done) {
 /////////////////////////////// WATCH
 gulp.task('watch', function() {
   gulp.watch(path.watch.pug,  gulp.series('htmlReload'));
-  gulp.watch(path.watch.style, gulp.series('styleReload'));
+  gulp.watch(path.watch.style, gulp.series('style:build'));
   gulp.watch(path.watch.js, gulp.series('js:build'));
   gulp.watch(path.watch.img, gulp.series('img:build'));
   gulp.watch(path.watch.resources, gulp.series('resources:build'));
@@ -190,7 +189,7 @@ gulp.task('watch', function() {
 /////////////////////////////// DEFAULT
 gulp.task('default', gulp.series(
   gulp.parallel('clean:build'),
-  gulp.parallel('htmlReload', 'styleReload', 'js:build'),
+  gulp.parallel('htmlReload', 'style:build', 'js:build'),
   gulp.parallel('img:build', 'fonts:build', 'resources:build', 'pngSprite', 'svgSprite'),
   gulp.parallel('browser-sync', 'watch')
 ));

@@ -1,7 +1,7 @@
 /////////////////////////////// SETINGS DEFAULT STYLES
 
 html {
-  font-display: optional;
+  font-display: swap;
   font-family: $font-base;
   font-size: $html-font-size;
   text-rendering: optimizeSpeed;
@@ -33,9 +33,6 @@ body {
 }
 
 main {
-  position: relative;
-  overflow: hidden;
-  z-index: 5;
   width: 100vw;
 }
 

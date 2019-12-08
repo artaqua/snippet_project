@@ -2,26 +2,44 @@ header.header-page
   .container-fluid
     .header-page__inner
       a.logo(href="index.html")
-        img(src=`${baseDir}assets/img/logo.png`, alt="")
+        img.lazy(src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 257 21'%3E%3C/svg%3E" data-src="assets/img/logo.png", alt="")
       button.btn-menu.header-page__btn-menu
         span.btn-menu__lines
           span.btn-menu__line.btn-menu__line_one
           span.btn-menu__line.btn-menu__line_two
           span.btn-menu__line.btn-menu__line_three
-      nav.nav-page.header-page__nav-page
-        ul.list-nav-page
+      .nav-page.header-page__nav-page
+        ul.list-nav-page.header-page__list-nav-page
           li.list-nav-page__item
-            a.list-nav-page__link(href="#") Квартиры
+            .list-nav-page__link-dropdown Карты
+              +svg('arrow-down', 'list-nav-page__icon')
+            .list-nav-page__tooltip
+              ul.list-nav-tooltip
+                li.list-nav-tooltip__item
+                  a.list-nav-tooltip__link(href="#") Карты
+                li.list-nav-tooltip__item
+                  a.list-nav-tooltip__link(href="#") Кредитные карты
+                li.list-nav-tooltip__item
+                  a.list-nav-tooltip__link(href="#") Кредитные карты
+                li.list-nav-tooltip__item
+                  a.list-nav-tooltip__link(href="#") Кредитные карты
           li.list-nav-page__item
-            a.list-nav-page__link(href="#") Новостройки
-          li.list-nav-page__item
-            a.list-nav-page__link(href="#") Коммерческая недвижимость
-          li.list-nav-page__item
-            a.list-nav-page__link(href="#") Застройщики
-      a.favorite.header-page__favorite(href="#")
-        +svg('star', 'favorite__icon')
-        span.favorite__name Избранное 
-        span.favorite__count (5)
-  
-
-   
+            .list-nav-page__link-dropdown Кредиты
+              +svg('arrow-down', 'list-nav-page__icon')
+            .list-nav-page__tooltip
+              ul.list-nav-tooltip
+                li.list-nav-tooltip__item
+                  a.list-nav-tooltip__link(href="#") Кредиты
+                li.list-nav-tooltip__item
+                  a.list-nav-tooltip__link(href="#") Кредиты
+                li.list-nav-tooltip__item
+                  a.list-nav-tooltip__link(href="#") Кредиты
+                li.list-nav-tooltip__item
+                  a.list-nav-tooltip__link(href="#") Кредиты
+        .city
+          select.city__select(name="city")
+            option(value="Москва" selected) Москва
+            option(value="Санкт-Петербург") Санкт-Петербург
+          a.city__link(href="#") 
+            span.city__name Москва
+            +svg('arrow-down', 'city__icon')

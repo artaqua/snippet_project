@@ -1,5 +1,5 @@
 /* Components */
-@import '_components/fonts';
+// @import '_components/fonts';
 @import '_components/variables';
 @import '_components/mixins';
 @import '_components/settings';
@@ -12,6 +12,8 @@
 @import '_layout/header';
 @import '_layout/sidebar-menu';
 @import '_layout/footer';
+@import '_layout/popups';
+@import '_layout/cookies';
 
 
 

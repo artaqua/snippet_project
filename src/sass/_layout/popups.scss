@@ -1,0 +1,294 @@
+@import '_components/variables';
+@import '_components/mixins';
+
+.popups {
+  display: block !important;
+}
+.popup {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  transition: all 600ms ease;
+  opacity: 0;
+  visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  padding: 40px 20px 40px 20px;
+  @include below(900px) {
+    padding: 20px;
+  }
+  @include below(400px) {
+    padding: 0;
+  }
+  &_active {
+    opacity: 1;
+    visibility: visible;
+  }
+  &__close {
+    z-index: 200;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  &__close-icon {
+    width: 18px;
+    height: 18px;
+    fill: $black;
+    transition: all 300ms ease;
+    &:hover {
+      fill: $yellow;
+    }
+  }
+  &__container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    @include below(500px) {
+      padding: 40px 30px 30px 30px;
+    }
+    @include below(400px) {
+      padding: 40px 20px 20px 20px;
+    }
+  }
+  &__head-title {
+    display: block;
+    font-size: 28px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    @include below(1100px) {
+      font-size: 24px;
+    }
+    @include below(900px) {
+      font-size: 20px;
+    }
+    @include below(500px) {
+      font-size: 18px;
+    }
+  }
+  &__descr {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    @include below(500px) {
+      font-size: 12px;
+    }
+  }
+  &__feedback {
+    margin-top: 20px;
+  }
+}
+.list-popular-city {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  &__popular {
+    display: inline;
+    font-size: 14px;
+    font-family: $font-2;
+    margin: 0;
+    line-height: 20px;
+    margin-right: 5px;
+  }
+  .list-city__field {
+    margin-right: 5px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+}
+.list-letter {
+  &__letter {
+    font-family: $font-2;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-bottom: 8px;
+  }
+  &__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -10px;;
+  }
+  &__col {
+    padding: 0 10px;
+    width: 16.6%;
+    @include below(1100px) {
+      width: 20%;
+    }
+    @include below(900px) {
+      width: 25%;
+    }
+    @include below(700px) {
+      width: 33.3%;
+    }
+    @include below(600px) {
+      width: 50%;
+    }
+    @include below(400px) {
+      width: 100%;
+    }
+  }
+  &__item {
+    margin-top: 20px;
+  }
+}
+.list-city {
+  &__item {
+    margin: 4px 0;
+  }
+  &__input {
+    display: none;
+  }
+  &__label {
+    display: inline;
+    font-family: $font-2;
+    font-size: 14px;
+    color: $black;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: all 300ms ease;
+    &:hover {
+      border-color: $yellow;
+    }
+  }
+}
+.list-city__input:checked + .list-city__label {
+  border-color: $yellow;
+}
+
+.feedback {
+  &__rates {
+    border: 1px solid #e1e1e1;
+  }
+  &__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    @include below(1200px) {
+      margin: 0 -5px;
+    }
+    @include below(900px) {
+      padding: 10px;
+    }
+  }
+  &__col {
+    flex-basis: 20%;
+    max-width: 20%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: 15px 20px;
+    @include below(900px) {
+      flex-basis: 33.3%;
+      max-width: 33.3%;
+      padding: 0 10px;
+    }
+    @include below(600px) {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+    @include below(450px) {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+  &__message {
+    width: 100%;
+    height: 114px;
+    border: none;
+    padding: 15px 20px;
+    border: 1px solid #e1e1e1;
+    color: $black;
+    margin-top: 10px;
+  }
+  &__btn {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 44px;
+    background-color: $yellow;
+    font-family: $font-1;
+    font-size: 16px;
+    text-align: center;
+    color: #434e65;
+    padding: 0 25px;
+    border-radius: 0;
+    margin-top: 15px;
+    @include below(1100px) {
+      font-size: 14px;
+    }
+    @include below(900px) {
+      width: 33.3%;
+    }
+    @include below(600px) {
+      width: 50%;
+    }
+    @include below(450px) {
+      width: 100%;
+    }
+    &:hover {
+      color: $black;
+      background-color: lighten($yellow,12%);
+    }
+  }
+}
+.pick-rate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__descr {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    @include below(900px) {
+      margin-bottom: 15px;
+    }
+  }
+  &__inner {
+    float: left;
+  }
+  &__input {
+    display: none;
+  }
+  &__label {
+    float: right;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 24px;
+    color: #d1d1d1;
+    transition: all 300ms ease;
+    user-select: none;
+    &_checked {
+      color: $yellow;
+    }
+  }
+}
+.pick-rate__inner > .pick-rate__input:checked ~ .pick-rate__label {
+  color: $yellow;   
+}
+.pick-rate__inner > .pick-rate__label:hover,
+.pick-rate__inner > .pick-rate__label:hover ~ .pick-rate__label {
+  color: $yellow; 
+}

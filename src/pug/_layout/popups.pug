@@ -1,0 +1,322 @@
+.popups(style="display: none;")
+  .popup.popup_city
+    .popup__container
+      a.popup__close(href="#")
+        +svg('cross', 'popup__close-icon')
+      h4.popup__head-title Выберите город
+      .list-popular-city
+        p.list-popular-city__popular Популярные города:
+        .list-city__field
+          input#popular-radio-1.list-city__input(type="radio" name="city" value="Москва")
+          label.list-city__label(for="popular-radio-1")  Москва, 
+        .list-city__field
+          input#popular-radio-2.list-city__input(type="radio" name="city" value="Санкт-Петербург")
+          label.list-city__label(for="popular-radio-2")  Санкт-Петербург,
+        .list-city__field
+          input#popular-radio-3.list-city__input(type="radio" name="city" value="Сочи")
+          label.list-city__label(for="popular-radio-3")  Сочи, 
+        .list-city__field
+          input#popular-radio-4.list-city__input(type="radio" name="city" value="Новосибирск")
+          label.list-city__label(for="popular-radio-4")  Новосибирск,
+      .list-letter
+        .list-letter__row
+          .list-letter__col
+            .list-letter__item
+              .list-letter__letter а
+              ul.list-city
+                li.list-city__item
+                  .list-city__field
+                    input#radio-1.list-city__input(type="radio" name="city" value="Москва" checked)
+                    label.list-city__label(for="radio-1") Москва
+                li.list-city__item
+                  .list-city__field
+                    input#radio-2.list-city__input(type="radio" name="city" value="Санкт-Питербург")
+                    label.list-city__label(for="radio-2") Санкт-Питербург
+                li.list-city__item
+                  .list-city__field
+                    input#radio-3.list-city__input(type="radio" name="city" value="Сочи")
+                    label.list-city__label(for="radio-3") Сочи
+                li.list-city__item
+                  .list-city__field
+                    input#radio-4.list-city__input(type="radio" name="city" value="Новосибирск")
+                    label.list-city__label(for="radio-4") Новосибирск
+                li.list-city__item
+                  .list-city__field
+                    input#radio-3.list-city__input(type="radio" name="city" value="Сочи")
+                    label.list-city__label(for="radio-3") Сочи
+                li.list-city__item
+                  .list-city__field
+                    input#radio-4.list-city__input(type="radio" name="city" value="Новосибирск")
+                    label.list-city__label(for="radio-4") Новосибирск
+                li.list-city__item
+                  .list-city__field
+                    input#radio-3.list-city__input(type="radio" name="city" value="Сочи")
+                    label.list-city__label(for="radio-3") Сочи
+                li.list-city__item
+                  .list-city__field
+                    input#radio-4.list-city__input(type="radio" name="city" value="Новосибирск")
+                    label.list-city__label(for="radio-4") Новосибирск
+          .list-letter__col
+            .list-letter__item
+              .list-letter__letter б
+              ul.list-city
+                li.list-city__item
+                  .list-city__field
+                    input#radio-5.list-city__input(type="radio" name="city" value="Москва")
+                    label.list-city__label(for="radio-5") Москва
+                li.list-city__item
+                  .list-city__field
+                    input#radio-6.list-city__input(type="radio" name="city" value="Санкт-Питербург")
+                    label.list-city__label(for="radio-6") Санкт-Питербург
+          .list-letter__col
+            .list-letter__item
+              .list-letter__letter в
+              ul.list-city
+                li.list-city__item
+                  .list-city__field
+                    input#radio-9.list-city__input(type="radio" name="city" value="Москва")
+                    label.list-city__label(for="radio-9") Москва
+                li.list-city__item
+                  .list-city__field
+                    input#radio-10.list-city__input(type="radio" name="city" value="Санкт-Питербург")
+                    label.list-city__label(for="radio-10") Санкт-Питербург
+                li.list-city__item
+                  .list-city__field
+                    input#radio-11.list-city__input(type="radio" name="city" value="Сочи")
+                    label.list-city__label(for="radio-11") Сочи
+                li.list-city__item
+                  .list-city__field
+                    input#radio-12.list-city__input(type="radio" name="city" value="Новосибирск")
+                    label.list-city__label(for="radio-12") Новосибирск
+                li.list-city__item
+                  .list-city__field
+                    input#radio-5.list-city__input(type="radio" name="city" value="Москва")
+                    label.list-city__label(for="radio-5") Москва
+                li.list-city__item
+                  .list-city__field
+                    input#radio-6.list-city__input(type="radio" name="city" value="Санкт-Питербург")
+                    label.list-city__label(for="radio-6") Санкт-Питербург
+          .list-letter__col
+            .list-letter__item
+              .list-letter__letter г
+              ul.list-city
+                li.list-city__item
+                  .list-city__field
+                    input#radio-13.list-city__input(type="radio" name="city" value="Москва")
+                    label.list-city__label(for="radio-13") Москва
+                li.list-city__item
+                  .list-city__field
+                    input#radio-14.list-city__input(type="radio" name="city" value="Санкт-Питербург")
+                    label.list-city__label(for="radio-14") Санкт-Питербург
+                li.list-city__item
+                  .list-city__field
+                    input#radio-15.list-city__input(type="radio" name="city" value="Сочи")
+                    label.list-city__label(for="radio-15") Сочи
+                li.list-city__item
+                  .list-city__field
+                    input#radio-16.list-city__input(type="radio" name="city" value="Новосибирск")
+                    label.list-city__label(for="radio-16") Новосибирск
+          .list-letter__col
+            .list-letter__item
+              .list-letter__letter д
+              ul.list-city
+                li.list-city__item
+                  .list-city__field
+                    input#radio-17.list-city__input(type="radio" name="city" value="Москва")
+                    label.list-city__label(for="radio-17") Москва
+                li.list-city__item
+                  .list-city__field
+                    input#radio-18.list-city__input(type="radio" name="city" value="Санкт-Питербург")
+                    label.list-city__label(for="radio-18") Санкт-Питербург
+                li.list-city__item
+                  .list-city__field
+                    input#radio-19.list-city__input(type="radio" name="city" value="Сочи")
+                    label.list-city__label(for="radio-19") Сочи
+                li.list-city__item
+                  .list-city__field
+                    input#radio-20.list-city__input(type="radio" name="city" value="Новосибирск")
+                    label.list-city__label(for="radio-20") Новосибирск
+          .list-letter__col
+            .list-letter__item
+              .list-letter__letter а
+              ul.list-city
+                li.list-city__item
+                  .list-city__field
+                    input#radio-21.list-city__input(type="radio" name="city" value="Москва")
+                    label.list-city__label(for="radio-21") Москва
+                li.list-city__item
+                  .list-city__field
+                    input#radio-22.list-city__input(type="radio" name="city" value="Санкт-Питербург")
+                    label.list-city__label(for="radio-22") Санкт-Питербург
+                li.list-city__item
+                  .list-city__field
+                    input#radio-23.list-city__input(type="radio" name="city" value="Сочи")
+                    label.list-city__label(for="radio-23") Сочи
+                li.list-city__item
+                  .list-city__field
+                    input#radio-24.list-city__input(type="radio" name="city" value="Новосибирск")
+                    label.list-city__label(for="radio-24") Новосибирск
+          .list-letter__col
+            .list-letter__item
+              .list-letter__letter б
+              ul.list-city
+                li.list-city__item
+                  .list-city__field
+                    input#radio-25.list-city__input(type="radio" name="city" value="Москва")
+                    label.list-city__label(for="radio-25") Москва
+                li.list-city__item
+                  .list-city__field
+                    input#radio-26.list-city__input(type="radio" name="city" value="Санкт-Питербург")
+                    label.list-city__label(for="radio-26") Санкт-Питербург
+                li.list-city__item
+                  .list-city__field
+                    input#radio-27.list-city__input(type="radio" name="city" value="Сочи")
+                    label.list-city__label(for="radio-27") Сочи
+                li.list-city__item
+                  .list-city__field
+                    input#radio-28.list-city__input(type="radio" name="city" value="Новосибирск")
+                    label.list-city__label(for="radio-28") Новосибирск
+          .list-letter__col
+            .list-letter__item
+              .list-letter__letter в
+              ul.list-city
+                li.list-city__item
+                  .list-city__field
+                    input#radio-29.list-city__input(type="radio" name="city" value="Москва")
+                    label.list-city__label(for="radio-29") Москва
+                li.list-city__item
+                  .list-city__field
+                    input#radio-30.list-city__input(type="radio" name="city" value="Санкт-Питербург")
+                    label.list-city__label(for="radio-30") Санкт-Питербург
+                li.list-city__item
+                  .list-city__field
+                    input#radio-31.list-city__input(type="radio" name="city" value="Сочи")
+                    label.list-city__label(for="radio-31") Сочи
+                li.list-city__item
+                  .list-city__field
+                    input#radio-32.list-city__input(type="radio" name="city" value="Новосибирск")
+                    label.list-city__label(for="radio-32") Новосибирск
+          .list-letter__col
+            .list-letter__item
+              .list-letter__letter г
+              ul.list-city
+                li.list-city__item
+                  .list-city__field
+                    input#radio-33.list-city__input(type="radio" name="city" value="Москва")
+                    label.list-city__label(for="radio-33") Москва
+                li.list-city__item
+                  .list-city__field
+                    input#radio-34.list-city__input(type="radio" name="city" value="Санкт-Питербург")
+                    label.list-city__label(for="radio-34") Санкт-Питербург
+                li.list-city__item
+                  .list-city__field
+                    input#radio-35.list-city__input(type="radio" name="city" value="Сочи")
+                    label.list-city__label(for="radio-35") Сочи
+                li.list-city__item
+                  .list-city__field
+                    input#radio-36.list-city__input(type="radio" name="city" value="Новосибирск")
+                    label.list-city__label(for="radio-36") Новосибирск
+          .list-letter__col
+            .list-letter__item
+              .list-letter__letter д
+              ul.list-city
+                li.list-city__item
+                  .list-city__field
+                    input#radio-37.list-city__input(type="radio" name="city" value="Москва")
+                    label.list-city__label(for="radio-37") Москва
+                li.list-city__item
+                  .list-city__field
+                    input#radio-38.list-city__input(type="radio" name="city" value="Санкт-Питербург")
+                    label.list-city__label(for="radio-38") Санкт-Питербург
+                li.list-city__item
+                  .list-city__field
+                    input#radio-39.list-city__input(type="radio" name="city" value="Сочи")
+                    label.list-city__label(for="radio-39") Сочи
+                li.list-city__item
+                  .list-city__field
+                    input#radio-40.list-city__input(type="radio" name="city" value="Новосибирск")
+                    label.list-city__label(for="radio-40") Новосибирск
+
+  .popup.popup_comment
+    .popup__container
+      a.popup__close(href="#")
+        +svg('cross', 'popup__close-icon')
+      h4.popup__head-title Оставить отзыв для компании: 
+        b "Money Man"
+      p.popup__descr Оцените компанию и напишите отзыв для нее в форме ниже.
+      form.feedback.popup__feedback
+        .feedback__rates
+          .feedback__row
+            .feedback__col
+              .pick-rate
+                .pick-rate__inner
+                  input.pick-rate__input(type="radio" id="approval-speed-loan-5" name="approval-speed-loan" value="5")
+                  label.pick-rate__label(for="approval-speed-loan-5") ★
+                  input.pick-rate__input(type="radio" id="approval-speed-loan-4" name="approval-speed-loan" value="4" checked)
+                  label.pick-rate__label(for="approval-speed-loan-4") ★
+                  input.pick-rate__input(type="radio" id="approval-speed-loan-3" name="approval-speed-loan" value="3")
+                  label.pick-rate__label(for="approval-speed-loan-3") ★
+                  input.pick-rate__input(type="radio" id="approval-speed-loan-2" name="approval-speed-loan" value="2")
+                  label.pick-rate__label(for="approval-speed-loan-2") ★
+                  input.pick-rate__input(type="radio" id="approval-speed-loan-1" name="approval-speed-loan" value="1")
+                  label.pick-rate__label(for="approval-speed-loan-1") ★
+                p.pick-rate__descr Скорость одобрения займа
+            .feedback__col
+              .pick-rate
+                .pick-rate__inner
+                  input.pick-rate__input(type="radio" id="amount-docs-5" name="amount-docs" value="5")
+                  label.pick-rate__label(for="amount-docs-5") ★
+                  input.pick-rate__input(type="radio" id="amount-docs-4" name="amount-docs" value="4" checked)
+                  label.pick-rate__label(for="amount-docs-4") ★
+                  input.pick-rate__input(type="radio" id="amount-docs-3" name="amount-docs" value="3")
+                  label.pick-rate__label(for="amount-docs-3") ★
+                  input.pick-rate__input(type="radio" id="amount-docs-2" name="amount-docs" value="2")
+                  label.pick-rate__label(for="amount-docs-2") ★
+                  input.pick-rate__input(type="radio" id="amount-docs-1" name="amount-docs" value="1")
+                  label.pick-rate__label(for="amount-docs-1") ★
+                p.pick-rate__descr Количество документов
+            .feedback__col
+              .pick-rate
+                .pick-rate__inner
+                  input.pick-rate__input(type="radio" id="support-5" name="support" value="5")
+                  label.pick-rate__label(for="support-5") ★
+                  input.pick-rate__input(type="radio" id="support-4" name="support" value="4" checked)
+                  label.pick-rate__label(for="support-4") ★
+                  input.pick-rate__input(type="radio" id="support-3" name="support" value="3")
+                  label.pick-rate__label(for="support-3") ★
+                  input.pick-rate__input(type="radio" id="support-2" name="support" value="2")
+                  label.pick-rate__label(for="support-2") ★
+                  input.pick-rate__input(type="radio" id="support-1" name="support" value="1")
+                  label.pick-rate__label(for="support-1") ★
+                p.pick-rate__descr Служба поддержки
+            .feedback__col
+              .pick-rate
+                .pick-rate__inner
+                  input.pick-rate__input(type="radio" id="delivery-speed-loan-5" name="delivery-speed-loan" value="5")
+                  label.pick-rate__label(for="delivery-speed-loan-5") ★
+                  input.pick-rate__input(type="radio" id="delivery-speed-loan-4" name="delivery-speed-loan" value="4" checked)
+                  label.pick-rate__label(for="delivery-speed-loan-4") ★
+                  input.pick-rate__input(type="radio" id="delivery-speed-loan-3" name="delivery-speed-loan" value="3")
+                  label.pick-rate__label(for="delivery-speed-loan-3") ★
+                  input.pick-rate__input(type="radio" id="delivery-speed-loan-2" name="delivery-speed-loan" value="2")
+                  label.pick-rate__label(for="delivery-speed-loan-2") ★
+                  input.pick-rate__input(type="radio" id="delivery-speed-loan-1" name="delivery-speed-loan" value="1")
+                  label.pick-rate__label(for="delivery-speed-loan-1") ★
+                p.pick-rate__descr Скорость выдачи займа
+            .feedback__col
+              .pick-rate
+                .pick-rate__inner
+                  input.pick-rate__input(type="radio" id="easement-5" name="easement" value="5")
+                  label.pick-rate__label(for="easement-5") ★
+                  input.pick-rate__input(type="radio" id="easement-4" name="easement" value="4" checked)
+                  label.pick-rate__label(for="easement-4") ★
+                  input.pick-rate__input(type="radio" id="easement-3" name="easement" value="3")
+                  label.pick-rate__label(for="easement-3") ★
+                  input.pick-rate__input(type="radio" id="easement-2" name="easement" value="2")
+                  label.pick-rate__label(for="easement-2") ★
+                  input.pick-rate__input(type="radio" id="easement-1" name="easement" value="1")
+                  label.pick-rate__label(for="easement-1") ★
+                p.pick-rate__descr Удобство личного кабинета
+
+        textarea.feedback__message(rows="10" cols="45" name="feedback-message" placeholder="Оставьте ваш отзыв")
+        button.btn.feedback__btn(href="#" type="submit") Отправить

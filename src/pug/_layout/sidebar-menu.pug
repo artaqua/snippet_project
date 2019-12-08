@@ -1,31 +1,51 @@
 aside.sidebar-menu.page__sidebar-menu(style="display: none;")
   a.sidebar-menu__close(href="#")
   .sidebar-menu__body
-    a.logo.sidebar-menu__logo(href="index.html")
-      img(src=`${baseDir}assets/img/logo.png`, alt="")
+    a.sidebar-menu__logo(href="index.html")
+      img.lazy(src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 257 21'%3E%3C/svg%3E" data-src="assets/img/logo.png", alt="")
     nav.nav-page.sidebar-menu__nav-page
       ul.list-nav-sidebar
         li.list-nav-sidebar__item
-          a.list-nav-sidebar__link(href="#") Квартиры
+          .list-nav-sidebar__link-dropdown(data-sub-menu=".list-sub-menu_1") Карты
+            +svg('card', 'list-nav-sidebar__icon')
+            +svg('arrow-right', 'list-nav-sidebar__icon-arrow')
         li.list-nav-sidebar__item
-          a.list-nav-sidebar__link(href="#") Новостройки
-        li.list-nav-sidebar__item
-          a.list-nav-sidebar__link(href="#") Коммерческая недвижимость
-        li.list-nav-sidebar__item
-          a.list-nav-sidebar__link(href="#") Застройщики
-    a.favorite.sidebar-menu__favorite(href="#")
-      +svg('star', 'favorite__icon')
-      span.favorite__name Избранное 
-      span.favorite__count (5)
+          .list-nav-sidebar__link-dropdown(data-sub-menu=".list-sub-menu_2") Кредиты
+            +svg('purse', 'list-nav-sidebar__icon')
+            +svg('arrow-right', 'list-nav-sidebar__icon-arrow')
+    .city.sidebar-menu__city
+      select.city__select(name="city")
+        option(value="Москва" selected) Москва
+        option(value="Санкт-Петербург") Санкт-Петербург
+      a.city__link(href="#") 
+        span.city__name Москва
+        +svg('arrow-down', 'city__icon')
 
-    .sidebar-menu__footer
-      .list-socials
-        a.list-socials__item
-          .list-socials__icon
-            +svg('vk', 'list-socials__svg')
-          span.list-socials__text Вконтакте
-        a.list-socials__item
-          .list-socials__icon
-            +svg('facebook', 'list-socials__svg')
-          span.list-socials__text Facebook
-      a.sidebar-menu__wordbook(href="#") wiki-словарь
+  .sidebar-menu__sub-menu
+    a.sidebar-menu__close-sub-menu(href="#") 
+      +svg('arrow-left', 'sidebar-menu__close-icon-sub-menu')
+      | Главное меню
+    ul.list-sub-menu.list-sub-menu_1
+      li.list-sub-menu__item
+        a.list-sub-menu__big-link(href="#") Карты
+          +svg('card', 'list-sub-menu__icon')
+      li.list-sub-menu__item
+        a.list-sub-menu__link(href="#") Карты 
+      li.list-sub-menu__item
+        a.list-sub-menu__link(href="#") Карты 
+      li.list-sub-menu__item
+        a.list-sub-menu__link(href="#") Карты 
+      li.list-sub-menu__item
+        a.list-sub-menu__link(href="#") Карты 
+    ul.list-sub-menu.list-sub-menu_2
+      li.list-sub-menu__item
+        a.list-sub-menu__big-link(href="#") Кредиты
+          +svg('purse', 'list-sub-menu__icon')
+      li.list-sub-menu__item
+        a.list-sub-menu__link(href="#") Кредиты 
+      li.list-sub-menu__item
+        a.list-sub-menu__link(href="#") Кредиты 
+      li.list-sub-menu__item
+        a.list-sub-menu__link(href="#") Кредиты 
+      li.list-sub-menu__item
+        a.list-sub-menu__link(href="#") Кредиты
