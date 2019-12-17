@@ -24,6 +24,15 @@ main {
   padding-left: 20px;
   width: 100%;
   max-width: $container-fluid-max-width;
+  @include md {
+    max-width: 970px;
+  }
+  @include sm {
+    max-width: 750px;
+  }
+  @include xs {
+    max-width: 100%;
+  }
 }
 .btn {
   z-index: 1;
