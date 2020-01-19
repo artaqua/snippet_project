@@ -9,6 +9,9 @@ import 'waypoints/lib/noframework.waypoints.js';
 import { 
   toggleScroll,
   hasClass,
+  slideToggle,
+  slideUp,
+  slideDown
 } from './functions.js';
 import yandexMap from './yandexMap.js';
 import youtube from './youtube.js';
@@ -24,9 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Loader Page
   (function() {
     const loader = document.querySelector('.loader');
-
     loader.classList.add('loader_hide');
   })();
+
+  // SlideToggle test
+  document.querySelector('.testt').addEventListener('click', (event) => {
+    event.preventDefault();
+    slideToggle(document.querySelector(".testt"), 1000);
+  }, false);
 
   // Animations
   (function () {
