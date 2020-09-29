@@ -36,6 +36,7 @@
     "swiper": "^4.5.0",
     "vanilla-lazyload": "^12.0.0",
     "waypoints": "^4.0.1",
+    "webfontloader": "^1.6.28",
     "ymaps-touch-scroll": "^2.0.1"
   }
 }

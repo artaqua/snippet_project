@@ -1,6 +1,7 @@
 ;'use strict';
 
 import LazyLoad from 'vanilla-lazyload';
+import WebFont from 'webfontloader';
 import Swiper from 'swiper';
 import noUiSlider from 'nouislider';
 import 'lightgallery.js';
@@ -17,18 +18,37 @@ import yandexMap from './yandexMap.js';
 import youtube from './youtube.js';
 
 // APP
+
+// Lazyloader
 let lazyLoadInstance = new LazyLoad({
   elements_selector: ".lazy"
 });
 
+// Web Font
+WebFont.load({
+  google: {
+    families: ['Open Sans:400,600,700', 'Oswald:400,600,700&display=swap']
+  },
+  active: function() {
+    // Убрать прелоадер когда загрузились шрифты
+    preloaderPage();
+  },
+  inactive: function() {
+    // Убрать прелоадер даже когда незагрузились шрифты
+    preloaderPage();
+  }
+});
+function preloaderPage() {
+  const loader = document.querySelector('.loader');
+  loader.classList.add('loader_hide');
+
+  setTimeout(() => {
+    toggleScroll('show');
+  }, 500);
+}
+
 // Event DOM Ready
 document.addEventListener("DOMContentLoaded", () => {
-
-  // Loader Page
-  (function() {
-    const loader = document.querySelector('.loader');
-    loader.classList.add('loader_hide');
-  })();
 
   // SlideToggle test
   document.querySelector('.testt').addEventListener('click', (event) => {

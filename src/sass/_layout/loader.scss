@@ -20,11 +20,11 @@
   &__elems {
     width: 50px;
     height: 50px;
-    animation: rotateLoader 1.6s linear infinite;
+    animation: rotateLoader 1.2s linear infinite;
     transform-origin: bottom center;
   }
   &__circle {
-    animation: growLoader 1.2s linear infinite;
+    animation: growLoader 1.0s linear infinite;
     background-color: $orange;
     border-radius: 50%;
     display: inline-block;
